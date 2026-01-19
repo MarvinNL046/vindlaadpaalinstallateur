@@ -1,0 +1,76 @@
+{
+  "types": [
+    {
+      "slug": "thuislader",
+      "name": "Thuislader Installatie",
+      "description": "Laadpaal installatie voor particulieren thuis. Laad uw elektrische auto veilig en snel op in uw eigen garage of oprit.",
+      "search_terms": ["thuislader", "laadpaal thuis", "home charger", "thuislaadpunt", "particulier laadpaal"]
+    },
+    {
+      "slug": "zakelijke-laadpaal",
+      "name": "Zakelijke Laadpaal",
+      "description": "Laadoplossingen voor bedrijven, kantoren en commerciele locaties. Van enkele laadpalen tot complete laadpleinen.",
+      "search_terms": ["zakelijke laadpaal", "bedrijfslaadpaal", "kantoor laadpaal", "commercieel laden"]
+    },
+    {
+      "slug": "slim-laden",
+      "name": "Slim Laden",
+      "description": "Intelligente laadoplossingen met dynamische tarieven, piekshaving en optimaal gebruik van zonne-energie.",
+      "search_terms": ["slim laden", "smart charging", "dynamisch laden", "intelligent laden"]
+    },
+    {
+      "slug": "load-balancing",
+      "name": "Load Balancing",
+      "description": "Verdeling van beschikbare stroomcapaciteit over meerdere laadpunten om overbelasting te voorkomen.",
+      "search_terms": ["load balancing", "stroomverdeling", "capaciteitsverdeling", "dynamische lastbalancering"]
+    },
+    {
+      "slug": "zonnepanelen-integratie",
+      "name": "Zonnepanelen Integratie",
+      "description": "Koppeling van uw laadpaal met zonnepanelen voor maximaal gebruik van eigen opgewekte groene energie.",
+      "search_terms": ["zonnepanelen laadpaal", "solar charging", "eigen energie laden", "PV integratie"]
+    },
+    {
+      "slug": "vve-laadoplossingen",
+      "name": "VvE Laadoplossingen",
+      "description": "Collectieve laadinfrastructuur voor appartementencomplexen en VvE's met gedeelde kosten en administratie.",
+      "search_terms": ["VvE laadpaal", "appartement laden", "collectief laden", "gedeelde laadinfrastructuur"]
+    },
+    {
+      "slug": "snellader",
+      "name": "Snellader Installatie",
+      "description": "DC snellaadstations voor publieke locaties, tankstations en bedrijventerreinen. Laden in minuten.",
+      "search_terms": ["snellader", "DC lader", "fast charger", "snellaadstation", "rapid charger"]
+    },
+    {
+      "slug": "fleet-charging",
+      "name": "Fleet Charging",
+      "description": "Laadoplossingen voor wagenparken en fleet management. Van bestelbussen tot vrachtwagens.",
+      "search_terms": ["fleet charging", "wagenpark laden", "fleet management", "bedrijfswagenpark"]
+    },
+    {
+      "slug": "openbare-laadpaal",
+      "name": "Openbare Laadpaal",
+      "description": "Installatie van publiek toegankelijke laadpalen voor gemeentes, parkeergarages en openbare locaties.",
+      "search_terms": ["openbare laadpaal", "publieke laadpaal", "gemeente laadpaal", "straatparkeren laden"]
+    },
+    {
+      "slug": "laadpaal-onderhoud",
+      "name": "Laadpaal Onderhoud",
+      "description": "Service en onderhoud van bestaande laadinfrastructuur. Reparatie, updates en periodiek onderhoud.",
+      "search_terms": ["laadpaal onderhoud", "service laadpaal", "reparatie laadpaal", "storingen"]
+    },
+    {
+      "slug": "laadpas-diensten",
+      "name": "Laadpas Diensten",
+      "description": "Advies en installatie van back-office systemen, laadpassen en betaaloplossingen voor laadpalen.",
+      "search_terms": ["laadpas", "back-office", "betaalsysteem", "RFID laden", "app laden"]
+    },
+    {
+      "slug": "groepenkast-uitbreiding",
+      "name": "Groepenkast Uitbreiding",
+      "description": "Uitbreiding of aanpassing van de groepenkast voor voldoende capaciteit voor uw laadpaal.",
+      "search_terms": ["groepenkast", "meterkast", "aansluiting verzwaren", "capaciteit uitbreiden"]
+    }
+  ]
+}

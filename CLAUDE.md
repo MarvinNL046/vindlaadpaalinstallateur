@@ -1,52 +1,54 @@
-# CLAUDE.md - RehabNearByMe.com Project Guide
+# CLAUDE.md - VindLaadpaalInstallateur.nl Project Guide
 
-This file provides guidance to Claude Code when working with the RehabNearByMe.com project.
+Dit bestand biedt richtlijnen aan Claude Code bij het werken met het VindLaadpaalInstallateur.nl project.
 
-## Project Overview
+## Project Overzicht
 
-RehabNearByMe.com is a comprehensive directory of rehabilitation and addiction treatment centers in the United States.
+VindLaadpaalInstallateur.nl is een uitgebreide directory van laadpaal installateurs in Nederland. De website helpt elektrische rijders bij het vinden van gecertificeerde installateurs voor thuisladers, zakelijke laadpalen en openbare laadinfrastructuur.
 
 ### Tech Stack
-- **Framework**: Next.js 16 with App Router
-- **Language**: TypeScript
+- **Framework**: Next.js 16 met App Router
+- **Taal**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui
 - **Database**: Supabase / Drizzle ORM
 - **Deployment**: Vercel
 
-## Key Features
+## Belangrijke Features
 
-### 1. Geographic Structure
-- `/state/[state]` - State-level listings (e.g., California)
-- `/county/[county]` - County-level listings
-- `/city/[city]` - City-level listings
-- `/facility/[slug]` - Individual facility detail pages
+### 1. Geografische Structuur
+- `/provincie/[provincie]` - Provincie-niveau lijsten (bijv. Noord-Holland)
+- `/gemeente/[gemeente]` - Gemeente-niveau lijsten
+- `/stad/[stad]` - Stad-niveau lijsten
+- `/installateur/[slug]` - Individuele installateur detailpagina's
 
-### 2. Facility Types
-- Inpatient Rehabilitation Centers
-- Outpatient Treatment Programs
-- Detox Centers
-- Sober Living Homes
-- Dual Diagnosis Treatment
-- Luxury Rehab Centers
+### 2. Installateur Types
+- Thuislader Installateurs (particulier)
+- Zakelijke Laadpaal Installateurs
+- Openbare Laadinfrastructuur Specialisten
+- Zonnepanelen + Laadpaal Combinatie
+- Slim Laden Experts
+- Snellader Installateurs
 
-### 3. Treatment Specializations
-- Alcohol Addiction
-- Drug Addiction (Opioids, Cocaine, Meth, etc.)
-- Prescription Drug Abuse
-- Mental Health & Co-occurring Disorders
-- Adolescent Programs
-- Veterans Programs
+### 3. Service Specialisaties
+- Laadpaal Installatie Thuis
+- Zakelijke Laadoplossingen
+- Laadpas Diensten
+- Slim Laden (Smart Charging)
+- Zonnepanelen Integratie
+- Load Balancing
+- Back-office Systemen
+- Onderhoud en Service
 
-### 4. Search & Filter
-- Search by location, facility name
-- Filter by treatment type
-- Filter by insurance accepted
-- Filter by amenities
+### 4. Zoeken & Filteren
+- Zoeken op locatie, installateursnaam
+- Filteren op type dienst
+- Filteren op laadpaal merk (bijv. Alfen, ABB, Wallbox)
+- Filteren op certificeringen
 
-## Data Structure
+## Data Structuur
 
-### Facility Data Format
+### Installateur Data Format
 ```typescript
 {
   id: string;
@@ -54,10 +56,10 @@ RehabNearByMe.com is a comprehensive directory of rehabilitation and addiction t
   slug: string;
   address: string;
   city: string;
-  state: string;
-  state_abbr: string;
-  county: string;
-  zip: string;
+  province: string;
+  province_abbr: string;
+  municipality: string;
+  postcode: string;
   phone?: string;
   website?: string;
   lat?: number;
@@ -65,32 +67,32 @@ RehabNearByMe.com is a comprehensive directory of rehabilitation and addiction t
   rating?: number;
   review_count?: number;
   photo?: string;
-  facility_types: string[];
-  treatment_types: string[];
-  insurance_accepted: string[];
-  amenities: string[];
+  installer_types: string[];
+  service_types: string[];
+  brands: string[];      // Laadpaal merken
+  certifications: string[];
   description?: string;
 }
 ```
 
-## Important URLs and Routes
+## Belangrijke URLs en Routes
 
-### Public Pages
-- `/` - Homepage with search
-- `/search` - Search results page
-- `/state/[state]` - State listings
-- `/county/[county]` - County listings
-- `/city/[city]` - City listings
-- `/facility/[slug]` - Facility detail page
-- `/compare` - Compare facilities
-- `/guide` - Treatment guides
-- `/about` - About page
-- `/contact` - Contact page
+### Publieke Pagina's
+- `/` - Homepage met zoekfunctie
+- `/zoeken` - Zoekresultaten pagina
+- `/provincie/[provincie]` - Provincie lijsten
+- `/gemeente/[gemeente]` - Gemeente lijsten
+- `/stad/[stad]` - Stad lijsten
+- `/installateur/[slug]` - Installateur detail pagina
+- `/vergelijk` - Vergelijk installateurs
+- `/gids` - Laadpaal gidsen
+- `/over-ons` - Over ons pagina
+- `/contact` - Contact pagina
 
 ### API Routes
-- `/api/search` - Search facilities
-- `/api/facility/[slug]` - Get facility data
-- `/api/facilities/nearby` - Get nearby facilities
+- `/api/search` - Zoek installateurs
+- `/api/installer/[slug]` - Get installateur data
+- `/api/installers/nearby` - Get installateurs in de buurt
 
 ## Development Commands
 
@@ -104,7 +106,7 @@ npm run build
 # Type checking
 npm run typecheck
 
-# Discover facilities (scraping)
+# Discover installateurs (scraping)
 npm run discover:test
 npm run discover:state
 npm run discover:full
@@ -112,7 +114,7 @@ npm run discover:full
 
 ## Environment Variables
 
-Required in `.env.local`:
+Vereist in `.env.local`:
 ```
 DATABASE_URL=
 NEXT_PUBLIC_SUPABASE_URL=
@@ -120,32 +122,63 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 GOOGLE_PLACES_API_KEY=
 ```
 
-## Content Guidelines
+## Content Richtlijnen
 
-### Target Audience
-- People seeking addiction treatment
-- Family members looking for help
-- Healthcare professionals
-- Insurance providers
+### Doelgroep
+- Eigenaren van elektrische auto's die een thuislader zoeken
+- Bedrijven die laadinfrastructuur willen installeren
+- VvE's en woningcorporaties
+- Gemeentes en overheden
+- Fleet managers
 
-### Tone
-- Compassionate and supportive
-- Professional and informative
-- Non-judgmental
-- Hopeful
+### Toon
+- Professioneel en informatief
+- Duurzaam en milieubewust
+- Praktisch en behulpzaam
+- Toekomstgericht
 
-### SEO Focus Keywords
-- rehab near me
-- addiction treatment centers
-- drug rehab [city]
-- alcohol rehab [state]
-- inpatient rehab
-- outpatient treatment
-- detox centers near me
+### SEO Focus Keywords (Nederlands)
+- laadpaal installateur
+- laadpaal installeren
+- thuislader installatie
+- elektrische auto opladen thuis
+- laadpaal installateur [stad]
+- laadpaal plaatsen
+- zakelijke laadpaal
+- laadstation installeren
+- EV lader installatie
+- slim laden thuis
 
-## Notes
+## Laadpaal Merken (voor filtering)
+- Alfen
+- ABB
+- Wallbox
+- EVBox
+- Charge Amps
+- Easee
+- Mennekes
+- Webasto
+- Zaptec
+- Tesla Wall Connector
 
-- This project follows a directory website architecture
-- Facility data will be scraped from Google Places API
-- Focus on US market initially
-- HIPAA compliance considerations for any user data
+## Nederlandse Provincies
+- Noord-Holland
+- Zuid-Holland
+- Utrecht
+- Noord-Brabant
+- Gelderland
+- Overijssel
+- Limburg
+- Flevoland
+- Groningen
+- Friesland
+- Drenthe
+- Zeeland
+
+## Notities
+
+- Dit project volgt een directory website architectuur
+- Installateur data wordt verzameld via Google Places API
+- Focus op de Nederlandse markt
+- Kleurthema: Groen (#22C55E) primair, Blauw (#2563EB) accent - eco/elektrisch kleuren
+- Alle content in het Nederlands

@@ -1,0 +1,77 @@
+{
+  "provinces": [
+    {
+      "name": "Noord-Holland",
+      "slug": "noord-holland",
+      "capital": "Haarlem",
+      "major_cities": ["Amsterdam", "Haarlem", "Alkmaar", "Zaandam", "Hilversum", "Amstelveen", "Hoofddorp", "Purmerend"]
+    },
+    {
+      "name": "Zuid-Holland",
+      "slug": "zuid-holland",
+      "capital": "Den Haag",
+      "major_cities": ["Rotterdam", "Den Haag", "Leiden", "Dordrecht", "Zoetermeer", "Delft", "Gouda", "Schiedam"]
+    },
+    {
+      "name": "Utrecht",
+      "slug": "utrecht",
+      "capital": "Utrecht",
+      "major_cities": ["Utrecht", "Amersfoort", "Veenendaal", "Nieuwegein", "Zeist", "Houten", "IJsselstein", "Woerden"]
+    },
+    {
+      "name": "Noord-Brabant",
+      "slug": "noord-brabant",
+      "capital": "Den Bosch",
+      "major_cities": ["Eindhoven", "Tilburg", "Breda", "Den Bosch", "Helmond", "Oosterhout", "Oss", "Bergen op Zoom"]
+    },
+    {
+      "name": "Gelderland",
+      "slug": "gelderland",
+      "capital": "Arnhem",
+      "major_cities": ["Nijmegen", "Arnhem", "Apeldoorn", "Ede", "Doetinchem", "Harderwijk", "Zutphen", "Tiel"]
+    },
+    {
+      "name": "Overijssel",
+      "slug": "overijssel",
+      "capital": "Zwolle",
+      "major_cities": ["Zwolle", "Enschede", "Deventer", "Hengelo", "Almelo", "Kampen", "Hardenberg", "Oldenzaal"]
+    },
+    {
+      "name": "Limburg",
+      "slug": "limburg",
+      "capital": "Maastricht",
+      "major_cities": ["Maastricht", "Venlo", "Heerlen", "Sittard", "Roermond", "Weert", "Geleen", "Kerkrade"]
+    },
+    {
+      "name": "Flevoland",
+      "slug": "flevoland",
+      "capital": "Lelystad",
+      "major_cities": ["Almere", "Lelystad", "Dronten", "Emmeloord", "Zeewolde", "Urk"]
+    },
+    {
+      "name": "Groningen",
+      "slug": "groningen",
+      "capital": "Groningen",
+      "major_cities": ["Groningen", "Hoogezand", "Veendam", "Stadskanaal", "Winschoten", "Delfzijl"]
+    },
+    {
+      "name": "Friesland",
+      "slug": "friesland",
+      "capital": "Leeuwarden",
+      "major_cities": ["Leeuwarden", "Drachten", "Sneek", "Heerenveen", "Harlingen", "Franeker"]
+    },
+    {
+      "name": "Drenthe",
+      "slug": "drenthe",
+      "capital": "Assen",
+      "major_cities": ["Assen", "Emmen", "Hoogeveen", "Meppel", "Coevorden", "Beilen"]
+    },
+    {
+      "name": "Zeeland",
+      "slug": "zeeland",
+      "capital": "Middelburg",
+      "major_cities": ["Middelburg", "Vlissingen", "Goes", "Terneuzen", "Hulst", "Zierikzee"]
+    }
+  ],
+  "total_provinces": 12
+}

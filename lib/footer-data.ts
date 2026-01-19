@@ -1,7 +1,7 @@
-import { getAllFacilities, getAllFacilityTypes, createStateSlug, createTypeSlug } from './data';
+import { getAllInstallateurs, getAllServiceTypes, createProvinceSlug, createTypeSlug } from './data';
 
 // Interfaces for footer data
-export interface FooterState {
+export interface FooterProvince {
   name: string;
   slug: string;
   count: number;
@@ -19,193 +19,193 @@ export interface FooterGuide {
   description?: string;
 }
 
-// Treatment types section
-export const treatmentTypes: FooterGuide[] = [
+// Service types section - Dutch EV charging services
+export const serviceTypes: FooterGuide[] = [
   {
-    href: '/treatment/inpatient-rehab',
-    label: 'Inpatient Rehab',
-    description: 'Residential treatment programs'
+    href: '/dienst/thuislader',
+    label: 'Thuislader Installatie',
+    description: 'Laadpaal voor particulieren thuis'
   },
   {
-    href: '/treatment/outpatient-programs',
-    label: 'Outpatient Programs',
-    description: 'Flexible treatment while living at home'
+    href: '/dienst/zakelijke-laadpaal',
+    label: 'Zakelijke Laadpaal',
+    description: 'Laadoplossingen voor bedrijven'
   },
   {
-    href: '/treatment/detox-centers',
-    label: 'Detox Centers',
-    description: 'Medical detoxification services'
+    href: '/dienst/slim-laden',
+    label: 'Slim Laden',
+    description: 'Intelligent laden met dynamische tarieven'
   },
   {
-    href: '/treatment/sober-living',
-    label: 'Sober Living Homes',
-    description: 'Transitional housing for recovery'
+    href: '/dienst/load-balancing',
+    label: 'Load Balancing',
+    description: 'Verdeling van stroomcapaciteit'
   },
   {
-    href: '/treatment/dual-diagnosis',
-    label: 'Dual Diagnosis',
-    description: 'Co-occurring mental health treatment'
+    href: '/dienst/zonnepanelen-integratie',
+    label: 'Zonnepanelen Integratie',
+    description: 'Laden met eigen opgewekte energie'
   },
   {
-    href: '/treatment/luxury-rehab',
-    label: 'Luxury Rehab',
-    description: 'Premium treatment facilities'
+    href: '/dienst/vve-laadoplossingen',
+    label: 'VvE Laadoplossingen',
+    description: 'Collectieve laadinfrastructuur voor appartementen'
   }
 ];
 
-// Addiction resources section
+// EV charging guides/resources section
 export const resources: FooterGuide[] = [
   {
-    href: '/guides/alcohol-addiction',
-    label: 'Alcohol Addiction',
-    description: 'Understanding and treating alcoholism'
+    href: '/gids/laadpaal-kiezen',
+    label: 'Laadpaal Kiezen',
+    description: 'Tips voor het kiezen van de juiste laadpaal'
   },
   {
-    href: '/guides/opioid-addiction',
-    label: 'Opioid Addiction',
-    description: 'Heroin, fentanyl, and prescription opioid treatment'
+    href: '/gids/kosten-laadpaal',
+    label: 'Kosten Laadpaal',
+    description: 'Wat kost een laadpaal installatie?'
   },
   {
-    href: '/guides/drug-addiction',
-    label: 'Drug Addiction',
-    description: 'Cocaine, meth, and substance abuse treatment'
+    href: '/gids/subsidies',
+    label: 'Subsidies & Regelingen',
+    description: 'Overzicht van beschikbare subsidies'
   },
   {
-    href: '/guides/prescription-drugs',
-    label: 'Prescription Drug Abuse',
-    description: 'Benzodiazepine and prescription addiction'
+    href: '/gids/merken-vergelijken',
+    label: 'Merken Vergelijken',
+    description: 'Alfen, EVBox, Wallbox en meer'
   },
   {
-    href: '/guides/insurance-coverage',
-    label: 'Insurance Coverage',
-    description: 'Understanding rehab insurance options'
+    href: '/gids/installatie-proces',
+    label: 'Installatie Proces',
+    description: 'Wat kun je verwachten bij installatie'
   },
   {
-    href: '/guides/choosing-rehab',
-    label: 'Choosing a Rehab',
-    description: 'How to find the right treatment center'
+    href: '/gids/thuisladen-tips',
+    label: 'Tips Thuisladen',
+    description: 'Optimaal thuisladen voor uw EV'
   }
 ];
 
-// Support resources section
+// Support/info section
 export const support: FooterGuide[] = [
   {
-    href: '/guides/family-support',
-    label: 'Family Support',
-    description: 'Resources for loved ones'
+    href: '/gids/slim-laden',
+    label: 'Slim Laden Uitgelegd',
+    description: 'Wat is slim laden en hoe werkt het?'
   },
   {
-    href: '/guides/intervention',
-    label: 'Intervention Guide',
-    description: 'How to help someone get treatment'
+    href: '/gids/laadpaal-zakelijk',
+    label: 'Zakelijk Laden',
+    description: 'Laadoplossingen voor bedrijven'
   },
   {
-    href: '/guides/aftercare',
-    label: 'Aftercare & Relapse Prevention',
-    description: 'Maintaining long-term recovery'
+    href: '/gids/elektrische-auto',
+    label: 'Elektrische Auto',
+    description: 'Alles over elektrisch rijden'
   },
   {
-    href: '/guides/veterans-programs',
-    label: 'Veterans Programs',
-    description: 'Treatment for military veterans'
+    href: '/gids/laadpas',
+    label: 'Laadpassen',
+    description: 'Vergelijk laadpassen en tarieven'
   },
   {
-    href: '/guides/teen-treatment',
-    label: 'Teen & Adolescent',
-    description: 'Youth addiction treatment programs'
+    href: '/gids/onderhoud',
+    label: 'Onderhoud Laadpaal',
+    description: 'Onderhoudstips voor uw laadpaal'
   }
 ];
 
 // Static guides content (pillar pages)
 export const guides: FooterGuide[] = [
   {
-    href: '/guides/treatment-types',
-    label: 'Types of Treatment',
-    description: 'Understand different treatment options'
+    href: '/gids/complete-handleiding',
+    label: 'Complete Handleiding',
+    description: 'Alles over laadpalen in Nederland'
   },
   {
-    href: '/guides/what-to-expect',
-    label: 'What to Expect in Rehab',
-    description: 'Guide to the treatment process'
+    href: '/gids/installatie-eisen',
+    label: 'Installatie Eisen',
+    description: 'Technische vereisten en normen'
   },
   {
-    href: '/guides/paying-for-rehab',
-    label: 'Paying for Rehab',
-    description: 'Financial options and insurance'
+    href: '/gids/laden-appartement',
+    label: 'Laden bij Appartement',
+    description: 'VvE en collectieve oplossingen'
   },
   {
-    href: '/guides/signs-of-addiction',
-    label: 'Signs of Addiction',
-    description: 'Recognizing substance abuse'
+    href: '/gids/toekomst-ev',
+    label: 'Toekomst van EV',
+    description: 'Ontwikkelingen in elektrisch rijden'
   },
   {
-    href: '/guides/recovery-success',
-    label: 'Recovery Success Stories',
-    description: 'Inspiring stories of recovery'
+    href: '/gids/laadsnelheid',
+    label: 'Laadsnelheid Uitgelegd',
+    description: 'kW, kWh en laadtijden'
   }
 ];
 
 // Cache for footer data
-let statesCacheFooter: FooterState[] | null = null;
+let provincesCacheFooter: FooterProvince[] | null = null;
 let typesCacheFooter: FooterType[] | null = null;
 
 /**
- * Get top states by facility count
- * @param limit - Maximum number of states to return (default 8)
- * @returns Array of states sorted by facility count (descending)
+ * Get top provinces by installateur count
+ * @param limit - Maximum number of provinces to return (default 8)
+ * @returns Array of provinces sorted by installateur count (descending)
  */
-export async function getTopStatesByFacilityCount(limit: number = 8): Promise<FooterState[]> {
-  if (statesCacheFooter && statesCacheFooter.length >= limit) {
-    return statesCacheFooter.slice(0, limit);
+export async function getTopProvincesByInstallateurCount(limit: number = 8): Promise<FooterProvince[]> {
+  if (provincesCacheFooter && provincesCacheFooter.length >= limit) {
+    return provincesCacheFooter.slice(0, limit);
   }
 
   try {
-    const facilities = await getAllFacilities();
+    const installateurs = await getAllInstallateurs();
 
-    // Count facilities per state
-    const stateCounts = new Map<string, number>();
+    // Count installateurs per province
+    const provinceCounts = new Map<string, number>();
 
-    for (const facility of facilities) {
-      if (facility.state && facility.state.trim()) {
-        const state = facility.state.trim();
-        stateCounts.set(state, (stateCounts.get(state) || 0) + 1);
+    for (const installateur of installateurs) {
+      if (installateur.province && installateur.province.trim()) {
+        const province = installateur.province.trim();
+        provinceCounts.set(province, (provinceCounts.get(province) || 0) + 1);
       }
     }
 
     // Convert to array and sort by count
-    const sortedStates: FooterState[] = Array.from(stateCounts.entries())
+    const sortedProvinces: FooterProvince[] = Array.from(provinceCounts.entries())
       .map(([name, count]) => ({
         name,
-        slug: createStateSlug(name),
+        slug: createProvinceSlug(name),
         count
       }))
       .sort((a, b) => b.count - a.count);
 
     // Cache the full list
-    statesCacheFooter = sortedStates;
+    provincesCacheFooter = sortedProvinces;
 
-    return sortedStates.slice(0, limit);
+    return sortedProvinces.slice(0, limit);
   } catch (error) {
-    console.error('Error getting top states:', error);
+    console.error('Error getting top provinces:', error);
     return [];
   }
 }
 
 /**
- * Get top facility types by count
+ * Get top service types by count
  * @param limit - Maximum number of types to return (default 8)
- * @returns Array of types sorted by facility count (descending)
+ * @returns Array of types sorted by installateur count (descending)
  */
-export async function getTopTypesByFacilityCount(limit: number = 8): Promise<FooterType[]> {
+export async function getTopTypesByInstallateurCount(limit: number = 8): Promise<FooterType[]> {
   if (typesCacheFooter && typesCacheFooter.length >= limit) {
     return typesCacheFooter.slice(0, limit);
   }
 
   try {
-    const facilities = await getAllFacilities();
-    const allTypes = await getAllFacilityTypes();
+    const installateurs = await getAllInstallateurs();
+    const allTypes = await getAllServiceTypes();
 
-    // Count facilities per type
+    // Count installateurs per type
     const typeCounts = new Map<string, number>();
     const typeNames = new Map<string, string>();
 
@@ -214,19 +214,16 @@ export async function getTopTypesByFacilityCount(limit: number = 8): Promise<Foo
       typeNames.set(type.slug, type.name);
     }
 
-    for (const facility of facilities) {
-      if (facility.type_slug && facility.type_slug.trim()) {
-        const typeSlug = facility.type_slug.trim();
-        typeCounts.set(typeSlug, (typeCounts.get(typeSlug) || 0) + 1);
-
-        // Store display name if we have it
-        if (facility.type && !typeNames.has(typeSlug)) {
-          typeNames.set(typeSlug, facility.type);
+    for (const installateur of installateurs) {
+      // Count by service types array
+      if (installateur.service_types && Array.isArray(installateur.service_types)) {
+        for (const serviceType of installateur.service_types) {
+          const typeSlug = createTypeSlug(serviceType);
+          typeCounts.set(typeSlug, (typeCounts.get(typeSlug) || 0) + 1);
+          if (!typeNames.has(typeSlug)) {
+            typeNames.set(typeSlug, serviceType);
+          }
         }
-      } else if (facility.type && facility.type.trim()) {
-        const typeSlug = createTypeSlug(facility.type.trim());
-        typeCounts.set(typeSlug, (typeCounts.get(typeSlug) || 0) + 1);
-        typeNames.set(typeSlug, facility.type.trim());
       }
     }
 
@@ -271,16 +268,16 @@ function formatTypeName(name: string): string {
 /**
  * Get all footer data in a single call (for server components)
  */
-export async function getFooterData(stateLimit: number = 8, typeLimit: number = 8) {
-  const [topStates, topTypes] = await Promise.all([
-    getTopStatesByFacilityCount(stateLimit),
-    getTopTypesByFacilityCount(typeLimit)
+export async function getFooterData(provinceLimit: number = 8, typeLimit: number = 8) {
+  const [topProvinces, topTypes] = await Promise.all([
+    getTopProvincesByInstallateurCount(provinceLimit),
+    getTopTypesByInstallateurCount(typeLimit)
   ]);
 
   return {
-    states: topStates,
+    provinces: topProvinces,
     types: topTypes,
-    treatmentTypes,
+    serviceTypes,
     resources,
     support,
     guides
@@ -291,6 +288,6 @@ export async function getFooterData(stateLimit: number = 8, typeLimit: number = 
  * Clear cache (useful for development/testing)
  */
 export function clearFooterCache() {
-  statesCacheFooter = null;
+  provincesCacheFooter = null;
   typesCacheFooter = null;
 }

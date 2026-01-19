@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Heart } from "lucide-react";
+import { Plug } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -42,14 +42,14 @@ export default function Logo({
       icon: "text-white",
       glow: "group-hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]",
       textPrimary: "text-white",
-      textAccent: "text-teal-300",
+      textAccent: "text-green-300",
     },
     dark: {
-      iconBg: "bg-teal-600 group-hover:bg-teal-500",
+      iconBg: "bg-green-600 group-hover:bg-green-500",
       icon: "text-white",
-      glow: "group-hover:shadow-[0_0_20px_rgba(13,148,136,0.5)]",
-      textPrimary: "text-teal-600",
-      textAccent: "text-gray-700",
+      glow: "group-hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]",
+      textPrimary: "text-green-600",
+      textAccent: "text-blue-600",
     },
   };
 
@@ -65,7 +65,7 @@ export default function Logo({
         className
       )}
     >
-      {/* Heart Icon Container - symbolizing recovery/healing */}
+      {/* Plug Icon Container - symbolizing EV charging */}
       <div
         className={cn(
           currentSize.container,
@@ -84,18 +84,17 @@ export default function Logo({
             "transition-opacity duration-300",
             variant === "light"
               ? "bg-gradient-to-tr from-white/10 to-transparent"
-              : "bg-gradient-to-tr from-teal-400/20 to-transparent"
+              : "bg-gradient-to-tr from-green-400/20 to-transparent"
           )}
         />
 
-        {/* Heart icon representing recovery and healing */}
-        <Heart
+        {/* Plug icon representing EV charging */}
+        <Plug
           className={cn(
             currentSize.icon,
             currentVariant.icon,
             "relative z-10 transition-transform duration-300",
-            "group-hover:scale-110",
-            "fill-current"
+            "group-hover:scale-110"
           )}
           strokeWidth={2}
         />
@@ -115,7 +114,7 @@ export default function Logo({
               "transition-colors duration-300"
             )}
           >
-            Rehab
+            Laadpaal
           </span>
           <span
             className={cn(
@@ -123,7 +122,7 @@ export default function Logo({
               "transition-colors duration-300"
             )}
           >
-            NearMe
+            Installateur
           </span>
         </span>
       )}

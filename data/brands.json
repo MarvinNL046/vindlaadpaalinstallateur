@@ -1,0 +1,100 @@
+{
+  "brands": [
+    {
+      "name": "Alfen",
+      "slug": "alfen",
+      "description": "Nederlandse fabrikant van hoogwaardige laadpalen. Bekend om betrouwbaarheid en slimme laadfuncties.",
+      "country": "Nederland",
+      "popular_models": ["Eve Single Pro-line", "Eve Double Pro-line", "Eve Mini"],
+      "features": ["Slim laden", "Load balancing", "Zonnepanelen integratie"]
+    },
+    {
+      "name": "EVBox",
+      "slug": "evbox",
+      "description": "Toonaangevende fabrikant van laadoplossingen voor thuis en zakelijk gebruik.",
+      "country": "Nederland",
+      "popular_models": ["Elvi", "BusinessLine", "Liviqo"],
+      "features": ["Smart charging", "App bediening", "Modulair design"]
+    },
+    {
+      "name": "Wallbox",
+      "slug": "wallbox",
+      "description": "Innovatieve laadpalen met bidirectioneel laden en stijlvol ontwerp.",
+      "country": "Spanje",
+      "popular_models": ["Pulsar Plus", "Commander 2", "Quasar 2"],
+      "features": ["Bidirectioneel laden", "Compact design", "V2H/V2G"]
+    },
+    {
+      "name": "Easee",
+      "slug": "easee",
+      "description": "Noorse fabrikant bekend om compacte en gebruiksvriendelijke laadrobots.",
+      "country": "Noorwegen",
+      "popular_models": ["Easee Home", "Easee Charge", "Easee Core"],
+      "features": ["Ultra compact", "Automatische updates", "Equalizer"]
+    },
+    {
+      "name": "Tesla",
+      "slug": "tesla",
+      "description": "Wall Connector speciaal geoptimaliseerd voor Tesla voertuigen maar ook geschikt voor andere EV's.",
+      "country": "Verenigde Staten",
+      "popular_models": ["Wall Connector Gen 3", "Universal Wall Connector"],
+      "features": ["Tesla integratie", "Elegant design", "Hoog vermogen"]
+    },
+    {
+      "name": "ABB",
+      "slug": "abb",
+      "description": "Wereldleider in elektrificatie met robuuste laadoplossingen voor alle toepassingen.",
+      "country": "Zwitserland",
+      "popular_models": ["Terra AC", "Terra DC"],
+      "features": ["Industriele kwaliteit", "Snelladen", "Betrouwbaarheid"]
+    },
+    {
+      "name": "Charge Amps",
+      "slug": "charge-amps",
+      "description": "Zweedse fabrikant met focus op design en duurzaamheid.",
+      "country": "Zweden",
+      "popular_models": ["Halo", "Aura", "Dawn"],
+      "features": ["Scandinavisch design", "RFID", "Load balancing"]
+    },
+    {
+      "name": "Mennekes",
+      "slug": "mennekes",
+      "description": "Duitse kwaliteit en de uitvinder van de Type 2 laadstekker standaard.",
+      "country": "Duitsland",
+      "popular_models": ["Amtron Compact", "Amtron Professional"],
+      "features": ["Type 2 standaard", "Made in Germany", "Robuust"]
+    },
+    {
+      "name": "Webasto",
+      "slug": "webasto",
+      "description": "Ervaren automotive toeleverancier met betrouwbare laadoplossingen.",
+      "country": "Duitsland",
+      "popular_models": ["Live", "Next", "Unite"],
+      "features": ["Automotive kwaliteit", "Weerbestendig", "Flexibel"]
+    },
+    {
+      "name": "Zaptec",
+      "slug": "zaptec",
+      "description": "Noorse innovator met focus op appartementencomplexen en collectieve installaties.",
+      "country": "Noorwegen",
+      "popular_models": ["Zaptec Go", "Zaptec Pro"],
+      "features": ["Compact", "VvE oplossingen", "Cloud management"]
+    },
+    {
+      "name": "Eneco",
+      "slug": "eneco",
+      "description": "Nederlandse energieleverancier met eigen laadpaal oplossingen en groene stroom.",
+      "country": "Nederland",
+      "popular_models": ["Eneco Laadpaal"],
+      "features": ["Groene stroom", "Slim laden", "Energie contract"]
+    },
+    {
+      "name": "Vattenfall",
+      "slug": "vattenfall",
+      "description": "Europese energieleverancier met laadoplossingen voor thuis en onderweg.",
+      "country": "Zweden",
+      "popular_models": ["InCharge"],
+      "features": ["Fossielvrij", "Abonnement", "Full service"]
+    }
+  ]
+}
