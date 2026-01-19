@@ -6,19 +6,19 @@ import { getAllStates, getAllFacilities, State, Facility } from '@/lib/data';
 import { getStatesComingSoonText } from '@/lib/stats-config';
 
 export const metadata: Metadata = {
-  title: 'All States | RehabNearMe',
-  description: 'Find treatment centers in all 50 US states. Browse rehab facilities by state to find addiction treatment centers, detox facilities, and recovery programs near you.',
+  title: 'Alle Provincies | VindLaadpaalInstallateur.nl',
+  description: 'Vind laadpaal installateurs in alle 12 Nederlandse provincies. Zoek op provincie om gecertificeerde installateurs voor thuisladers, zakelijke laadpalen en openbare laadinfrastructuur te vinden.',
   openGraph: {
-    title: 'All States | RehabNearMe',
-    description: 'Find treatment centers in all 50 US states.',
-    url: 'https://rehabnearbyme.com/state',
+    title: 'Alle Provincies | VindLaadpaalInstallateur.nl',
+    description: 'Vind laadpaal installateurs in alle 12 Nederlandse provincies.',
+    url: 'https://vindlaadpaalinstallateur.nl/provincie',
   }
 };
 
 // Revalidate every 24 hours
 export const revalidate = 86400;
 
-export default async function StatesPage() {
+export default async function ProvinciesPage() {
   const [statesData, facilitiesData] = await Promise.all([
     getAllStates(),
     getAllFacilities()
@@ -64,31 +64,31 @@ export default async function StatesPage() {
             <ol className="flex items-center space-x-2 text-sm text-primary-foreground/70">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li>/</li>
-              <li className="text-white">States</li>
+              <li className="text-white">Provincies</li>
             </ol>
           </nav>
 
           <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
-            Treatment Centers by State
+            Laadpaal Installateurs per Provincie
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl">
-            Explore treatment centers across all 50 US states. Select a state to discover
-            local rehab facilities, detox centers, and recovery programs in your area.
+            Ontdek laadpaal installateurs in alle 12 Nederlandse provincies. Selecteer een provincie
+            om lokale installateurs voor thuisladers, zakelijke laadpalen en openbare laadinfrastructuur te vinden.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-8 mt-8">
             <div>
-              <div className="text-3xl font-bold text-coral-300">{statesData.length}</div>
-              <div className="text-primary-foreground/70 text-sm">States</div>
+              <div className="text-3xl font-bold text-green-300">{statesData.length}</div>
+              <div className="text-primary-foreground/70 text-sm">Provincies</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-coral-300">{totalFacilities.toLocaleString('en-US')}</div>
-              <div className="text-primary-foreground/70 text-sm">Treatment Centers</div>
+              <div className="text-3xl font-bold text-green-300">{totalFacilities.toLocaleString('nl-NL')}</div>
+              <div className="text-primary-foreground/70 text-sm">Installateurs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-coral-300">{totalCounties.toLocaleString('en-US')}</div>
-              <div className="text-primary-foreground/70 text-sm">Counties</div>
+              <div className="text-3xl font-bold text-green-300">{totalCounties.toLocaleString('nl-NL')}</div>
+              <div className="text-primary-foreground/70 text-sm">Gemeenten</div>
             </div>
           </div>
         </div>
@@ -100,19 +100,19 @@ export default async function StatesPage() {
           {activeStates.length > 0 && (
             <>
               <h2 className="font-serif text-2xl font-semibold mb-6">
-                States with Treatment Center Data
+                Provincies met Installateur Data
               </h2>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
                 {activeStates.map((state) => (
                   <Link
                     key={state.abbr}
-                    href={`/state/${state.slug}`}
+                    href={`/provincie/${state.slug}`}
                     className="group"
                   >
                     <Card className="h-full p-6 border-2 border-transparent hover:border-accent/30 transition-all duration-300">
                       <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center group-hover:bg-accent transition-colors">
-                          <MapPin className="w-6 h-6 text-teal-700 group-hover:text-white transition-colors" />
+                        <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center group-hover:bg-accent transition-colors">
+                          <MapPin className="w-6 h-6 text-green-700 group-hover:text-white transition-colors" />
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-sm font-medium text-muted-foreground">{state.abbr}</span>
@@ -128,22 +128,22 @@ export default async function StatesPage() {
 
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">Treatment Centers</span>
-                          <span className="font-semibold text-accent">{state.facilityCount.toLocaleString('en-US')}</span>
+                          <span className="text-muted-foreground">Installateurs</span>
+                          <span className="font-semibold text-accent">{state.facilityCount.toLocaleString('nl-NL')}</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">Counties</span>
+                          <span className="text-muted-foreground">Gemeenten</span>
                           <span className="font-medium">{state.countyCount}</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">Cities</span>
+                          <span className="text-muted-foreground">Steden</span>
                           <span className="font-medium">{state.cityCount}</span>
                         </div>
                       </div>
 
                       <div className="mt-4 pt-4 border-t">
                         <span className="text-sm font-medium text-accent flex items-center gap-1 group-hover:gap-2 transition-all">
-                          View treatment centers
+                          Bekijk installateurs
                           <ChevronRight className="w-4 h-4" />
                         </span>
                       </div>
@@ -156,13 +156,13 @@ export default async function StatesPage() {
 
           {/* All States Grid */}
           <h2 className="font-serif text-2xl font-semibold mb-6">
-            {activeStates.length > 0 ? 'All States' : 'Browse by State'}
+            {activeStates.length > 0 ? 'Alle Provincies' : 'Zoek per Provincie'}
           </h2>
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {sortedStates.map((state) => (
               <Link
                 key={state.abbr}
-                href={`/state/${state.slug}`}
+                href={`/provincie/${state.slug}`}
                 className={`group p-4 rounded-lg border transition-all ${
                   state.facilityCount > 0
                     ? 'hover:border-accent/50 hover:bg-accent/5'
@@ -176,8 +176,8 @@ export default async function StatesPage() {
                     </div>
                     <div className="text-sm text-muted-foreground">
                       {state.facilityCount > 0
-                        ? `${state.facilityCount} treatment centers`
-                        : 'Coming soon'
+                        ? `${state.facilityCount} installateurs`
+                        : 'Binnenkort'
                       }
                     </div>
                   </div>
@@ -196,12 +196,12 @@ export default async function StatesPage() {
                     <Building2 className="w-6 h-6 text-muted-foreground" />
                   </div>
                   <div>
-                    <h2 className="font-serif text-lg font-semibold mb-2">More States Coming Soon</h2>
+                    <h2 className="font-serif text-lg font-semibold mb-2">Meer Provincies Binnenkort</h2>
                     <p className="text-muted-foreground mb-3">
                       {getStatesComingSoonText()}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Currently adding data for {pendingStates.length} more states including {pendingStates.slice(0, 3).map(s => s.name).join(', ')}, and more.
+                      We voegen momenteel data toe voor {pendingStates.length} meer provincies waaronder {pendingStates.slice(0, 3).map(s => s.name).join(', ')}, en meer.
                     </p>
                   </div>
                 </div>
@@ -212,16 +212,16 @@ export default async function StatesPage() {
           {/* CTA Section */}
           <div className="mt-16 text-center">
             <h2 className="font-serif text-2xl font-semibold mb-4">
-              Not sure where to look?
+              Weet u niet waar u moet zoeken?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-              Use our search feature to find treatment centers by name, city, zip code, or facility type.
+              Gebruik onze zoekfunctie om installateurs te vinden op naam, stad, postcode of type dienst.
             </p>
             <Link
-              href="/search"
+              href="/zoeken"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
             >
-              Search Treatment Centers
+              Zoek Laadpaal Installateurs
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

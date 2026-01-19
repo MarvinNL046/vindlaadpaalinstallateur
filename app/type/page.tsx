@@ -1,195 +1,176 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Building2, Heart, Users, Clock, Shield, Brain, Pill, Activity, ChevronRight } from 'lucide-react';
+import { Zap, Home, Building2, Globe, Battery, Sun, ChevronRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'Treatment Types - Find by Category | RehabNearMe.com',
-  description: 'Browse treatment centers by type: inpatient rehab, outpatient programs, detox centers, sober living, and more across the United States.',
+  title: 'Laadpaal Types - Zoek op Categorie | VindLaadpaalInstallateur.nl',
+  description: 'Zoek laadpaal installateurs op type dienst: thuislader installatie, zakelijke laadpalen, openbare laadinfrastructuur, snelladers en zonnepanelen integratie.',
   openGraph: {
-    title: 'Treatment Types - Find by Category',
-    description: 'Find the right type of treatment center for your needs.',
+    title: 'Laadpaal Types - Zoek op Categorie',
+    description: 'Vind het juiste type laadpaal installateur voor uw wensen.',
   }
 };
 
 const categoryIcons: Record<string, any> = {
-  'inpatient-rehab': Building2,
-  'outpatient-program': Clock,
-  'detox-center': Activity,
-  'sober-living': Heart,
-  'dual-diagnosis': Brain,
-  'luxury-rehab': Shield,
-  'veterans-program': Shield,
-  'adolescent-program': Users,
+  'thuislader': Home,
+  'zakelijk': Building2,
+  'openbaar': Globe,
+  'snellader': Battery,
+  'zonnepanelen': Sun,
 };
 
 const categories = [
   {
-    title: 'Residential Treatment',
-    types: ['inpatient-rehab', 'residential-treatment', 'luxury-rehab', 'long-term-rehab']
+    title: 'Particulier',
+    types: ['thuislader', 'slim-laden', 'zonnepanelen-integratie', 'laadpaal-met-kabel']
   },
   {
-    title: 'Outpatient Programs',
-    types: ['outpatient-program', 'intensive-outpatient', 'partial-hospitalization', 'day-treatment']
+    title: 'Zakelijk',
+    types: ['zakelijke-laadpaal', 'werkgevers-laadpaal', 'hotel-horeca', 'retail-laden']
   },
   {
-    title: 'Detox & Medical',
-    types: ['detox-center', 'medical-detox', 'medication-assisted-treatment', 'hospital-based']
+    title: 'Openbaar & Snelladen',
+    types: ['openbare-laadpaal', 'snellader', 'laadplein', 'tankstation']
   },
   {
-    title: 'Specialized Programs',
-    types: ['dual-diagnosis', 'mental-health', 'trauma-informed', 'holistic-treatment']
+    title: 'Specialisaties',
+    types: ['zonnepanelen-laadpaal', 'load-balancing', 'vve-oplossingen', 'wagenpark-laden']
   },
   {
-    title: 'Demographics',
-    types: ['veterans-program', 'adolescent-program', 'womens-program', 'mens-program', 'lgbtq-friendly']
+    title: 'Laadpaal Merken',
+    types: ['alfen', 'wallbox', 'evbox', 'easee', 'charge-amps', 'mennekes']
   },
   {
-    title: 'Addiction Types',
-    types: ['alcohol-rehab', 'drug-rehab', 'opioid-treatment', 'cocaine-treatment', 'meth-treatment']
-  },
-  {
-    title: 'Aftercare & Support',
-    types: ['sober-living', 'halfway-house', 'aftercare-program', 'support-groups']
+    title: 'Diensten',
+    types: ['installatie', 'onderhoud', 'reparatie', 'advies', 'subsidie-aanvraag']
   }
 ];
 
-// Treatment type definitions
-const treatmentTypes: Record<string, { name: string; description: string }> = {
-  'inpatient-rehab': {
-    name: 'Inpatient Rehabilitation',
-    description: 'Residential treatment programs where patients live at the facility while receiving intensive care.'
+// Laadpaal type definitions
+const laadpaalTypes: Record<string, { name: string; description: string }> = {
+  'thuislader': {
+    name: 'Thuislader Installatie',
+    description: 'Professionele installatie van een laadpaal bij u thuis voor het laden van uw elektrische auto.'
   },
-  'residential-treatment': {
-    name: 'Residential Treatment',
-    description: 'Long-term live-in programs providing structured recovery environments.'
+  'slim-laden': {
+    name: 'Slim Laden',
+    description: 'Laadpalen met slimme functies voor laden tijdens daluren of met zonne-energie.'
   },
-  'luxury-rehab': {
-    name: 'Luxury Rehab Centers',
-    description: 'High-end treatment facilities offering premium amenities and personalized care.'
+  'zonnepanelen-integratie': {
+    name: 'Zonnepanelen Integratie',
+    description: 'Combineer uw laadpaal met zonnepanelen voor gratis en duurzaam laden.'
   },
-  'long-term-rehab': {
-    name: 'Long-Term Rehab',
-    description: 'Extended treatment programs lasting 90 days or more for comprehensive recovery.'
+  'laadpaal-met-kabel': {
+    name: 'Laadpaal met Vaste Kabel',
+    description: 'Thuisladers met een vaste laadkabel voor extra gemak.'
   },
-  'outpatient-program': {
-    name: 'Outpatient Programs',
-    description: 'Treatment programs allowing patients to live at home while attending scheduled sessions.'
+  'zakelijke-laadpaal': {
+    name: 'Zakelijke Laadpalen',
+    description: 'Laadinfrastructuur voor bedrijven met meerdere laadpunten en back-office systemen.'
   },
-  'intensive-outpatient': {
-    name: 'Intensive Outpatient (IOP)',
-    description: 'Structured outpatient programs with multiple weekly sessions.'
+  'werkgevers-laadpaal': {
+    name: 'Werkgevers Laadpaal',
+    description: 'Laadoplossingen voor werknemers met registratie en doorbelasting.'
   },
-  'partial-hospitalization': {
-    name: 'Partial Hospitalization (PHP)',
-    description: 'Day programs providing hospital-level care without overnight stays.'
+  'hotel-horeca': {
+    name: 'Hotel & Horeca Laden',
+    description: 'Laadpalen voor gasten van hotels, restaurants en recreatie.'
   },
-  'day-treatment': {
-    name: 'Day Treatment Programs',
-    description: 'Full-day treatment programs that allow patients to return home each evening.'
+  'retail-laden': {
+    name: 'Retail Laadpunten',
+    description: 'Laadinfrastructuur voor winkelcentra en parkeerterreinen.'
   },
-  'detox-center': {
-    name: 'Detox Centers',
-    description: 'Medical facilities specializing in safe withdrawal management.'
+  'openbare-laadpaal': {
+    name: 'Openbare Laadpalen',
+    description: 'Installatie en beheer van openbare laadinfrastructuur in de publieke ruimte.'
   },
-  'medical-detox': {
-    name: 'Medical Detox',
-    description: 'Medically supervised detoxification with 24/7 medical support.'
+  'snellader': {
+    name: 'Snellader Installatie',
+    description: 'Installatie van DC-snelladers met hoge vermogens voor snel laden.'
   },
-  'medication-assisted-treatment': {
-    name: 'Medication-Assisted Treatment',
-    description: 'Programs combining medications with counseling for opioid and alcohol addiction.'
+  'laadplein': {
+    name: 'Laadplein Aanleggen',
+    description: 'Complete laadpleinen met meerdere laadpunten voor grootschalig laden.'
   },
-  'hospital-based': {
-    name: 'Hospital-Based Treatment',
-    description: 'Treatment programs within hospital settings for complex medical needs.'
+  'tankstation': {
+    name: 'Tankstation Laadpunten',
+    description: 'Laadinfrastructuur voor tankstations en snelweglocaties.'
   },
-  'dual-diagnosis': {
-    name: 'Dual Diagnosis Treatment',
-    description: 'Programs treating both addiction and co-occurring mental health disorders.'
+  'zonnepanelen-laadpaal': {
+    name: 'Zonnepanelen + Laadpaal',
+    description: 'Gecombineerde installatie van zonnepanelen en laadpaal voor maximaal rendement.'
   },
-  'mental-health': {
-    name: 'Mental Health Programs',
-    description: 'Integrated treatment addressing mental health alongside addiction.'
+  'load-balancing': {
+    name: 'Load Balancing',
+    description: 'Slim verdelen van laadvermogen over meerdere laadpunten.'
   },
-  'trauma-informed': {
-    name: 'Trauma-Informed Care',
-    description: 'Treatment approaches that recognize and address trauma in recovery.'
+  'vve-oplossingen': {
+    name: 'VvE Laadoplossingen',
+    description: 'Laadinfrastructuur voor appartementencomplexen en VvE\'s.'
   },
-  'holistic-treatment': {
-    name: 'Holistic Treatment',
-    description: 'Programs incorporating alternative therapies like yoga, meditation, and nutrition.'
+  'wagenpark-laden': {
+    name: 'Wagenpark Laden',
+    description: 'Complete laadoplossingen voor bedrijfswagenparken.'
   },
-  'veterans-program': {
-    name: 'Veterans Programs',
-    description: 'Specialized treatment programs designed for military veterans.'
+  'alfen': {
+    name: 'Alfen Installateurs',
+    description: 'Gecertificeerde installateurs voor Alfen laadpalen.'
   },
-  'adolescent-program': {
-    name: 'Adolescent Programs',
-    description: 'Age-appropriate treatment programs for teens and young adults.'
+  'wallbox': {
+    name: 'Wallbox Installateurs',
+    description: 'Erkende installateurs voor Wallbox laadstations.'
   },
-  'womens-program': {
-    name: "Women's Programs",
-    description: 'Gender-specific treatment addressing unique needs of women in recovery.'
+  'evbox': {
+    name: 'EVBox Installateurs',
+    description: 'Gespecialiseerde installateurs voor EVBox laadpalen.'
   },
-  'mens-program': {
-    name: "Men's Programs",
-    description: 'Gender-specific treatment programs designed for men.'
+  'easee': {
+    name: 'Easee Installateurs',
+    description: 'Gecertificeerde installateurs voor Easee laadpalen.'
   },
-  'lgbtq-friendly': {
-    name: 'LGBTQ+ Friendly Programs',
-    description: 'Inclusive treatment programs welcoming LGBTQ+ individuals.'
+  'charge-amps': {
+    name: 'Charge Amps Installateurs',
+    description: 'Installateurs voor Charge Amps laadstations.'
   },
-  'alcohol-rehab': {
-    name: 'Alcohol Rehabilitation',
-    description: 'Treatment programs specializing in alcohol use disorder recovery.'
+  'mennekes': {
+    name: 'Mennekes Installateurs',
+    description: 'Gespecialiseerde installateurs voor Mennekes laadpalen.'
   },
-  'drug-rehab': {
-    name: 'Drug Rehabilitation',
-    description: 'Comprehensive treatment for various substance use disorders.'
+  'installatie': {
+    name: 'Laadpaal Installatie',
+    description: 'Professionele installatie van alle typen laadpalen.'
   },
-  'opioid-treatment': {
-    name: 'Opioid Treatment',
-    description: 'Specialized programs for opioid and heroin addiction recovery.'
+  'onderhoud': {
+    name: 'Onderhoud & Service',
+    description: 'Regelmatig onderhoud en service voor uw laadpaal.'
   },
-  'cocaine-treatment': {
-    name: 'Cocaine Treatment',
-    description: 'Treatment programs focused on cocaine and stimulant addiction.'
+  'reparatie': {
+    name: 'Laadpaal Reparatie',
+    description: 'Snelle reparatie bij storingen of defecten.'
   },
-  'meth-treatment': {
-    name: 'Methamphetamine Treatment',
-    description: 'Specialized treatment for methamphetamine addiction recovery.'
+  'advies': {
+    name: 'Laadpaal Advies',
+    description: 'Professioneel advies over de beste laadoplossing voor uw situatie.'
   },
-  'sober-living': {
-    name: 'Sober Living Homes',
-    description: 'Transitional housing providing structured, substance-free living environments.'
-  },
-  'halfway-house': {
-    name: 'Halfway Houses',
-    description: 'Transitional residences bridging treatment and independent living.'
-  },
-  'aftercare-program': {
-    name: 'Aftercare Programs',
-    description: 'Ongoing support services following primary treatment completion.'
-  },
-  'support-groups': {
-    name: 'Support Groups',
-    description: 'Peer-based recovery groups and 12-step programs.'
+  'subsidie-aanvraag': {
+    name: 'Subsidie Aanvraag',
+    description: 'Hulp bij het aanvragen van subsidies voor uw laadpaal.'
   },
 };
 
-export default function TreatmentTypesPage() {
+export default function LaadpaalTypesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-teal-800 to-teal-900 text-white py-12">
+      <div className="bg-gradient-to-br from-green-800 to-green-900 text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">
-            Treatment Types
+            Laadpaal Types
           </h1>
           <p className="text-white/80 text-lg max-w-2xl">
-            Find the right treatment program for your needs. We categorize treatment centers by type,
-            from inpatient rehab to outpatient programs and specialized care.
+            Vind de juiste laadpaal installateur voor uw wensen. We categoriseren installateurs op type dienst,
+            van thuislader installatie tot zakelijke laadpleinen en snelladers.
           </p>
         </div>
       </div>
@@ -202,16 +183,16 @@ export default function TreatmentTypesPage() {
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {category.types.map((typeSlug) => {
-                const type = treatmentTypes[typeSlug];
+                const type = laadpaalTypes[typeSlug];
                 if (!type) return null;
-                const Icon = categoryIcons[typeSlug] || Building2;
+                const Icon = categoryIcons[typeSlug] || Zap;
 
                 return (
                   <Link key={typeSlug} href={`/type/${typeSlug}`}>
                     <Card className="p-5 hover:shadow-hover transition-all duration-300 hover:-translate-y-1 h-full">
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0">
-                          <Icon className="w-5 h-5 text-teal-700" />
+                        <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-5 h-5 text-green-700" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <h3 className="font-semibold text-foreground mb-1 truncate">
@@ -234,10 +215,10 @@ export default function TreatmentTypesPage() {
         {/* Full List */}
         <section className="mt-12 bg-secondary/50 rounded-xl p-6">
           <h2 className="font-serif text-xl font-bold text-foreground mb-4">
-            All Treatment Types
+            Alle Laadpaal Types
           </h2>
           <div className="flex flex-wrap gap-2">
-            {Object.entries(treatmentTypes).map(([slug, type]) => (
+            {Object.entries(laadpaalTypes).map(([slug, type]) => (
               <Link
                 key={slug}
                 href={`/type/${slug}`}
