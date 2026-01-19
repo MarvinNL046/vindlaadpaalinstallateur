@@ -1,423 +1,252 @@
-# RehabNearMe.com - E-E-A-T Implementation Guide
+# VindLaadpaalInstallateur.nl - E-E-A-T Implementatie Gids
 
-**Repository:** https://github.com/MarvinNL046/rehabnearbyme
-**Created:** 18-01-2026
-**Purpose:** Maximize Google Search visibility through E-E-A-T compliance
-
----
-
-## What is E-E-A-T?
-
-Google's E-E-A-T framework evaluates content quality:
-
-- **E**xperience - First-hand experience with the topic
-- **E**xpertise - Knowledge and skills in the field
-- **A**uthoritativeness - Recognition as a trusted source
-- **T**rustworthiness - Accuracy, honesty, and safety
-
-**Why it matters for RehabNearMe:** Addiction treatment is classified as **YMYL (Your Money or Your Life)** content, meaning Google applies stricter quality standards because incorrect information could harm users.
+**Repository:** https://github.com/MarvinNL046/vindlaadpaalinstallateur
+**Aangemaakt:** 19-01-2026
+**Doel:** Maximaliseer Google Search zichtbaarheid door E-E-A-T compliance
 
 ---
 
-## Experience Implementation
+## Wat is E-E-A-T?
+
+Google's E-E-A-T framework evalueert content kwaliteit:
+
+- **E**xperience - Directe ervaring met het onderwerp
+- **E**xpertise - Kennis en vaardigheden in het vakgebied
+- **A**uthoritativeness - Erkenning als betrouwbare bron
+- **T**rustworthiness - Nauwkeurigheid, eerlijkheid en veiligheid
+
+**Waarom het belangrijk is voor VindLaadpaalInstallateur:** Elektrische mobiliteit en laadinfrastructuur is een groeiende sector waar consumenten betrouwbare informatie nodig hebben voor investeringsbeslissingen.
+
+---
+
+## Experience Implementatie
 
 ### 1. User-Generated Content
 
 **Reviews & Testimonials:**
-- [ ] Enable verified user reviews on facility pages
-- [ ] Require email verification for reviewers
-- [ ] Add "Verified Patient" badge for confirmed stays
-- [ ] Allow photo uploads with reviews
-- [ ] Display review dates prominently
+- [ ] Schakel geverifieerde gebruikersreviews in op installateur pagina's
+- [ ] Vereis e-mailverificatie voor reviewers
+- [ ] Voeg "Geverifieerde Klant" badge toe voor bevestigde installaties
+- [ ] Sta foto-uploads toe bij reviews
+- [ ] Toon reviewdatums prominent
 
-**Implementation:**
+**Implementatie:**
 ```tsx
-// Review component should show:
-- Reviewer name (or anonymous option)
-- "Verified Stay" badge if confirmed
-- Date of review
-- Treatment type received
-- Length of stay
-- Would recommend (yes/no)
-- Detailed review text
+// Review component moet tonen:
+- Reviewer naam (of anonieme optie)
+- "Geverifieerde Installatie" badge indien bevestigd
+- Datum van review
+- Type laadpaal geinstalleerd
+- Beoordeling service en kwaliteit
+- Zou aanbevelen (ja/nee)
+- Gedetailleerde reviewtekst
 ```
 
-### 2. First-Person Experience Content
+### 2. Eerste-Persoons Ervaring Content
 
-**Blog Topics from Experience:**
-- [ ] "What My First Week in Rehab Was Like"
-- [ ] "How I Chose the Right Treatment Center"
-- [ ] "My Journey Through Detox: What to Expect"
-- [ ] "Life After Rehab: 1 Year Sober"
-- [ ] "Family's Perspective: Supporting a Loved One"
+**Blog Onderwerpen vanuit Ervaring:**
+- [ ] "Mijn Ervaring met Thuislader Installatie"
+- [ ] "Hoe Ik de Juiste Laadpaal Installateur Koos"
+- [ ] "Van Offerte tot Opladen: Het Complete Proces"
+- [ ] "1 Jaar Elektrisch Rijden: Thuislader Review"
+- [ ] "VvE en Laadpalen: Mijn Ervaringen"
 
-**Guidelines:**
-- Partner with recovery advocates for authentic stories
-- Include author bio with recovery credentials
-- Add disclaimer about individual experiences
-- Update content with follow-up stories
+**Richtlijnen:**
+- Partner met EV-rijders voor authentieke verhalen
+- Voeg auteur bio toe met EV-ervaring
+- Voeg disclaimer toe over individuele ervaringen
+- Update content met follow-up verhalen
 
-### 3. Facility Visit Program
+### 3. Installateur Verificatie Programma
 
-- [ ] Visit and document facilities (photos, video)
-- [ ] Create "Staff Verified" badge for visited facilities
-- [ ] Publish facility tour content
-- [ ] Interview facility staff and patients (with consent)
+- [ ] Bezoek en documenteer installateurs (foto's, video)
+- [ ] Maak "Geverifieerd" badge voor bezochte installateurs
+- [ ] Publiceer installateur profiel content
+- [ ] Interview installateurs en klanten (met toestemming)
 
 ---
 
-## Expertise Implementation
+## Expertise Implementatie
 
 ### 1. Expert Contributors
 
-**Build Expert Network:**
+**Bouw Expert Netwerk:**
 
-| Expert Type | Role | Content |
-|-------------|------|---------|
-| Licensed Counselors (LCSW, LPC) | Article review, Q&A | Treatment approaches |
-| Medical Doctors (MD, DO) | Medical accuracy review | Detox, medications |
-| Addiction Specialists (CADC) | Primary content | Recovery programs |
-| Psychiatrists | Mental health content | Dual diagnosis |
-| Nutritionists | Wellness content | Recovery nutrition |
+| Expert Type | Rol | Content |
+|-------------|-----|---------|
+| Gecertificeerde Elektriciens | Artikel review, Q&A | Installatie technieken |
+| EV-Specialisten | Primaire content | Laadoplossingen |
+| Energieadviseurs | Advies content | Slim laden, zonnepanelen |
+| NEN-Inspecteurs | Technische review | Veiligheid en keuringen |
 
-**Expert Author Pages:**
-- [ ] Create /about/experts page
-- [ ] Individual expert bio pages
-- [ ] Link experts to their content
-- [ ] Display credentials prominently
-- [ ] Include license verification links
+**Expert Auteur Pagina's:**
+- [ ] Maak /over-ons/experts pagina
+- [ ] Individuele expert bio pagina's
+- [ ] Link experts aan hun content
+- [ ] Toon certificeringen prominent
+- [ ] Voeg verificatie links toe
 
-**Schema Implementation:**
+**Schema Implementatie:**
 ```json
 {
   "@type": "Person",
-  "name": "Dr. Jane Smith",
-  "jobTitle": "Addiction Medicine Specialist",
-  "credentials": ["MD", "FASAM"],
+  "name": "Jan van der Berg",
+  "jobTitle": "Gecertificeerd Laadpaal Installateur",
+  "credentials": ["NEN 1010", "EV-Installateur"],
   "affiliation": {
     "@type": "Organization",
-    "name": "American Society of Addiction Medicine"
-  },
-  "sameAs": [
-    "https://linkedin.com/in/drjanesmith",
-    "https://npiregistry.cms.hhs.gov/..."
-  ]
+    "name": "UNETO-VNI"
+  }
 }
 ```
 
-### 2. Content Quality Standards
+### 2. Content Kwaliteitsstandaarden
 
-**Every Article Must Include:**
-- [ ] Author name and credentials
-- [ ] Medical reviewer (for health content)
-- [ ] Publication date
-- [ ] Last reviewed/updated date
-- [ ] Sources and citations
-- [ ] Clear, accurate information
+**Elk Artikel Moet Bevatten:**
+- [ ] Auteur naam en certificeringen
+- [ ] Technisch reviewer (voor installatie content)
+- [ ] Publicatiedatum
+- [ ] Laatst gereviewed/bijgewerkt datum
+- [ ] Bronnen en citaties
+- [ ] Duidelijke, accurate informatie
 
-**Article Template:**
-```markdown
-# Article Title
+### 3. Educatieve Content
 
-**Written by:** [Author Name], [Credentials]
-**Medically Reviewed by:** [Reviewer Name], [Credentials]
-**Published:** [Date] | **Last Updated:** [Date]
-
-[Content...]
-
-## Sources
-1. [Source with link]
-2. [Source with link]
-
----
-*This article was reviewed for medical accuracy by [Reviewer].*
-```
-
-### 3. Educational Content
-
-**Create Comprehensive Guides:**
-- [x] Insurance & Payment Guide
-- [x] What to Expect in Treatment
-- [ ] Types of Addiction Treatment (detailed)
-- [ ] Understanding Withdrawal & Detox
-- [ ] Mental Health & Addiction (Dual Diagnosis)
-- [ ] Medication-Assisted Treatment (MAT)
-- [ ] Family Guide to Intervention
-- [ ] Relapse Prevention Strategies
-- [ ] Finding Treatment for Veterans
-- [ ] Teen & Adolescent Treatment
+**Maak Uitgebreide Gidsen:**
+- [x] Subsidie & Betaling Gids (SEEH, MIA/VAMIL)
+- [x] Wat te Verwachten bij Installatie
+- [ ] Types Laadpalen (gedetailleerd)
+- [ ] Meterkast Verzwaring Uitleg
+- [ ] Slim Laden en Dynamische Tarieven
+- [ ] Zonnepanelen Integratie
+- [ ] VvE Laadpaal Aanvragen
+- [ ] Zakelijke Laadoplossingen
 
 ---
 
-## Authoritativeness Implementation
+## Authoritativeness Implementatie
 
-### 1. Brand Authority Signals
+### 1. Merk Autoriteit Signalen
 
-**About Page Requirements:**
-- [ ] Company mission and values
-- [ ] Team bios with photos
-- [ ] Physical address (or registered agent)
-- [ ] Contact information (email, phone)
-- [ ] Company history
-- [ ] Editorial guidelines
-- [ ] Partnerships and affiliations
+**Over Ons Pagina Vereisten:**
+- [ ] Bedrijfsmissie en waarden
+- [ ] Team bio's met foto's
+- [ ] Fysiek adres (of geregistreerd agent)
+- [ ] Contactinformatie (email, telefoon)
+- [ ] Bedrijfsgeschiedenis
+- [ ] Redactionele richtlijnen
+- [ ] Partnerships en affiliaties
 
 **Trust Badges:**
-- [ ] SAMHSA partnership/data source
-- [ ] LegitScript certification (if applicable)
-- [ ] BBB accreditation
-- [ ] SSL certificate (already implemented)
+- [ ] Erkende installateurs netwerk
+- [ ] UNETO-VNI partnership
+- [ ] KvK registratie
+- [ ] SSL certificaat (al geimplementeerd)
 - [ ] Privacy policy compliance
 
-### 2. External Authority Signals
+### 2. Externe Autoriteit Signalen
 
-**Link Building Strategy:**
-- [ ] Guest posts on addiction recovery blogs
-- [ ] Partnerships with treatment associations
-- [ ] Press releases for major updates
-- [ ] Expert quotes in media articles
-- [ ] Academic citations
+**Link Building Strategie:**
+- [ ] Gastposts op EV en duurzaamheid blogs
+- [ ] Partnerships met installateurverenigingen
+- [ ] Persberichten voor grote updates
+- [ ] Expert quotes in media artikelen
 
-**Desired Backlinks From:**
-- Government sites (.gov) - SAMHSA, NIH, CDC
-- Educational sites (.edu) - university addiction studies
-- Healthcare organizations - hospitals, medical associations
-- News outlets - health sections
-- Non-profits - addiction recovery organizations
+**Gewenste Backlinks Van:**
+- Overheid sites (.nl/.gov) - RVO, RDW
+- Brancheorganisaties - UNETO-VNI, ElaadNL
+- Nieuwskanalen - duurzaamheid secties
+- Non-profits - milieu organisaties
 
-### 3. Citations & References
+### 3. Citaties & Referenties
 
-**Always Cite:**
-- SAMHSA (Substance Abuse and Mental Health Services Administration)
-- NIDA (National Institute on Drug Abuse)
-- CDC (Centers for Disease Control)
-- WHO (World Health Organization)
-- Peer-reviewed medical journals
-- State health departments
-
-**Citation Format:**
-```html
-<cite>
-  According to <a href="https://www.samhsa.gov/..." rel="noopener">SAMHSA</a>,
-  approximately 21 million Americans have at least one addiction...
-</cite>
-```
+**Altijd Citeren:**
+- RVO (Rijksdienst voor Ondernemend Nederland)
+- ElaadNL (kenniscentrum laadinfrastructuur)
+- Netbeheerders (informatie over aansluitingen)
+- CBS (Centraal Bureau voor de Statistiek)
 
 ---
 
-## Trustworthiness Implementation
+## Trustworthiness Implementatie
 
-### 1. Accuracy & Transparency
+### 1. Nauwkeurigheid & Transparantie
 
-**Fact-Checking Process:**
-1. Writer creates content with citations
-2. Medical expert reviews for accuracy
-3. Editor checks sources and claims
-4. Legal review for compliance
-5. Publish with review date
-6. Schedule annual content audits
+**Fact-Checking Proces:**
+1. Schrijver maakt content met citaties
+2. Technisch expert reviewt voor nauwkeurigheid
+3. Editor checkt bronnen en claims
+4. Publiceer met review datum
+5. Plan jaarlijkse content audits
 
-**Correction Policy:**
-- [ ] Create /corrections page
-- [ ] Document all content corrections
-- [ ] Add correction notices to updated articles
-- [ ] Allow users to report inaccuracies
+### 2. Gebruikersveiligheid
 
-### 2. User Safety
+**Veiligheids Disclaimers:**
+- [ ] Installatie disclaimer op alle technische content
+- [ ] "Laat alleen gecertificeerde installateurs werken"
+- [ ] Noodcontact informatie voor elektrische problemen
+- [ ] NEN 1010 keuring informatie
 
-**Crisis Resources (Always Visible):**
-```tsx
-// Crisis banner component - show on all pages
-<CrisisBanner>
-  If you're in crisis, call 988 (Suicide & Crisis Lifeline)
-  or text HOME to 741741 (Crisis Text Line)
-</CrisisBanner>
-```
+### 3. Privacy & Beveiliging
 
-**Safety Disclaimers:**
-- [ ] Medical disclaimer on all health content
-- [ ] "Not a substitute for professional advice"
-- [ ] Emergency contact information
-- [ ] Overdose prevention resources
-
-### 3. Privacy & Security
-
-**User Data Protection:**
-- [ ] Clear privacy policy
-- [ ] HIPAA-compliant contact forms
-- [ ] No selling of user data
+**Gebruikersdata Bescherming:**
+- [ ] Duidelijke privacy policy
+- [ ] AVG-compliant contactformulieren
+- [ ] Geen verkoop van gebruikersdata
 - [ ] Cookie consent banner
-- [ ] Data deletion requests honored
+- [ ] Data verwijderingsverzoeken gehonoreerd
 
-**Contact Form Disclaimer:**
-```
-Your information is confidential. We will only use it to
-connect you with treatment resources. We never share your
-personal information with third parties without your consent.
-```
+### 4. Financiele Transparantie
 
-### 4. Financial Transparency
-
-**Disclosure Requirements:**
+**Disclosure Vereisten:**
 - [ ] Affiliate link disclosures
-- [ ] Sponsored content labels
-- [ ] Advertising policy page
-- [ ] How we make money page
-
-**Example Disclosure:**
-```html
-<aside class="disclosure">
-  RehabNearMe.com may receive compensation from treatment
-  facilities for featured placements. This does not influence
-  our editorial content or facility ratings.
-</aside>
-```
+- [ ] Gesponsorde content labels
+- [ ] Advertentie beleid pagina
+- [ ] Hoe wij geld verdienen pagina
 
 ---
 
-## Technical E-E-A-T Implementation
+## Technische E-E-A-T Implementatie
 
 ### 1. Schema Markup
 
-**Required Schema Types:**
+**Vereiste Schema Types:**
 
 ```json
 // Organization Schema
 {
   "@type": "Organization",
-  "name": "RehabNearMe.com",
-  "url": "https://rehabnearme.com",
-  "logo": "https://rehabnearme.com/logo.png",
+  "name": "VindLaadpaalInstallateur.nl",
+  "url": "https://vindlaadpaalinstallateur.nl",
+  "logo": "https://vindlaadpaalinstallateur.nl/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
-    "contactType": "customer service"
-  },
-  "sameAs": [
-    "https://facebook.com/rehabnearme",
-    "https://twitter.com/rehabnearme"
-  ]
-}
-
-// Article Schema with Author
-{
-  "@type": "Article",
-  "headline": "...",
-  "author": {
-    "@type": "Person",
-    "name": "...",
-    "credentials": "...",
-    "url": "/about/experts/..."
-  },
-  "reviewedBy": {
-    "@type": "Person",
-    "name": "Dr. ...",
-    "credentials": "MD"
-  },
-  "datePublished": "...",
-  "dateModified": "..."
-}
-
-// MedicalWebPage Schema
-{
-  "@type": "MedicalWebPage",
-  "about": {
-    "@type": "MedicalCondition",
-    "name": "Substance Use Disorder"
-  },
-  "lastReviewed": "2026-01-18",
-  "reviewedBy": {
-    "@type": "Person",
-    "name": "..."
+    "email": "info@vindlaadpaalinstallateur.nl",
+    "contactType": "klantenservice"
   }
 }
 ```
 
-### 2. Content Freshness
+### 2. Content Versheid
 
-**Update Schedule:**
+**Update Schema:**
 
-| Content Type | Review Frequency |
-|--------------|------------------|
-| Facility data | Monthly |
-| Treatment guides | Quarterly |
-| Statistics/data | When new data released |
-| Blog posts | Annually |
-| Expert bios | Annually |
-
-**Show Update Dates:**
-```tsx
-<time dateTime="2026-01-18">
-  Last updated: January 18, 2026
-</time>
-```
-
-### 3. Page Quality Indicators
-
-**Add to All Pages:**
-- [ ] Clear page titles
-- [ ] Descriptive meta descriptions
-- [ ] Breadcrumb navigation
-- [ ] Table of contents (for long articles)
-- [ ] Related content links
-- [ ] Share buttons
-- [ ] Print-friendly option
-
----
-
-## E-E-A-T Checklist for New Content
-
-Before publishing any content:
-
-### Experience
-- [ ] Does the content reflect real experience?
-- [ ] Are user experiences/reviews included?
-- [ ] Is first-hand knowledge demonstrated?
-
-### Expertise
-- [ ] Is the author qualified to write this?
-- [ ] Are credentials displayed?
-- [ ] Was it reviewed by an expert?
-
-### Authoritativeness
-- [ ] Are sources cited?
-- [ ] Are sources authoritative?
-- [ ] Does it link to official resources?
-
-### Trustworthiness
-- [ ] Is the information accurate?
-- [ ] Are there proper disclaimers?
-- [ ] Is the publication date shown?
-- [ ] Is contact information available?
-
----
-
-## Monitoring & Improvement
-
-### Track These Metrics:
-- Google Search Console: Impressions, clicks, CTR
-- Core Web Vitals: LCP, FID, CLS
-- User engagement: Time on page, bounce rate
-- Review quality: Average rating, response rate
-- Content freshness: Last updated dates
-
-### Quarterly E-E-A-T Audit:
-1. Review top 20 pages for compliance
-2. Update outdated information
-3. Add missing expert reviews
-4. Check broken citations
-5. Update schema markup
-6. Review user feedback
+| Content Type | Review Frequentie |
+|--------------|-------------------|
+| Installateur data | Maandelijks |
+| Technische gidsen | Per kwartaal |
+| Subsidie informatie | Bij wijzigingen |
+| Blog posts | Jaarlijks |
 
 ---
 
 ## Resources
 
 - [Google Search Quality Rater Guidelines](https://guidelines.raterhub.com/)
-- [Google E-E-A-T Documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-- [SAMHSA Resources](https://www.samhsa.gov/)
-- [Schema.org Medical Types](https://schema.org/MedicalWebPage)
+- [Google E-E-A-T Documentatie](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [RVO Subsidies](https://www.rvo.nl/)
+- [ElaadNL Kennisbank](https://www.elaad.nl/)
 
 ---
 
-*This document should be reviewed quarterly and updated based on Google algorithm changes and industry best practices.*
+*Dit document wordt per kwartaal gereviewed en bijgewerkt op basis van Google algoritme wijzigingen en best practices.*

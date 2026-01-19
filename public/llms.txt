@@ -1,30 +1,30 @@
-# RehabNearByMe.com
+# VindLaadpaalInstallateur.nl
 
-> The most comprehensive guide to rehabilitation and addiction treatment centers in the United States
+> De meest uitgebreide gids voor laadpaal installateurs in Nederland
 
-## Summary
+## Samenvatting
 
-RehabNearByMe.com is an extensive directory of rehabilitation facilities and addiction treatment centers across all 50 US states. The site helps visitors find information about treatment options for addiction recovery, mental health support, and substance abuse treatment.
+VindLaadpaalInstallateur.nl is een uitgebreide directory van laadpaal installateurs in heel Nederland. De site helpt bezoekers bij het vinden van informatie over installateurs voor thuisladers, zakelijke laadpalen en openbare laadinfrastructuur.
 
-## Key Data
+## Belangrijke Data
 
-- Thousands of treatment facilities
-- All 50 states covered
-- Multiple facility types: Inpatient, Outpatient, Detox, Sober Living
-- Includes reviews, ratings, and contact information
+- Honderden gecertificeerde installateurs
+- Alle 12 provincies gedekt
+- Meerdere service types: Thuislader, Zakelijk, Slim Laden, Snellader
+- Inclusief reviews, beoordelingen en contactinformatie
 
-## Main Pages
+## Hoofdpagina's
 
-- /search - Search by location, facility name, or treatment type
-- /compare - Compare up to 3 facilities
-- /state/[name] - Browse by state
-- /facility/[slug] - Facility detail pages
+- /zoeken - Zoek op locatie, bedrijfsnaam of service type
+- /vergelijk - Vergelijk tot 3 installateurs
+- /provincie/[naam] - Blader per provincie
+- /installateur/[slug] - Installateur detail pagina's
 
 ## Contact
 
-- Website: https://rehabnearbyme.com
-- Email: info@rehabnearbyme.com
+- Website: https://vindlaadpaalinstallateur.nl
+- Email: info@vindlaadpaalinstallateur.nl
 
-## More Information
+## Meer Informatie
 
-See /llms-full.txt for comprehensive documentation.
+Zie /llms-full.txt voor uitgebreide documentatie.

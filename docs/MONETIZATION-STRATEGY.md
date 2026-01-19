@@ -1,262 +1,200 @@
-# RehabNearMe.com - Monetization Strategy
+# VindLaadpaalInstallateur.nl - Monetisatie Strategie
 
-**Repository:** https://github.com/MarvinNL046/rehabnearbyme
-**Created:** 18-01-2026
-**Status:** Planning Phase
+**Repository:** https://github.com/MarvinNL046/vindlaadpaalinstallateur
+**Aangemaakt:** 19-01-2026
+**Status:** Planning Fase
 
 ---
 
 ## Executive Summary
 
-RehabNearMe.com operates in the addiction treatment directory space, a high-value vertical with significant monetization potential. This document outlines multiple revenue streams while maintaining ethical standards and user trust.
+VindLaadpaalInstallateur.nl opereert in de laadpaal installatie directory ruimte, een groeiende markt met significante monetisatie potentie. Dit document beschrijft meerdere inkomstenstromen met behoud van ethische standaarden en gebruikersvertrouwen.
 
 ---
 
-## Revenue Streams
+## Inkomstenstromen
 
-### 1. Pay-Per-Lead (PPL) - Primary Revenue
+### 1. Pay-Per-Lead (PPL) - Primaire Inkomsten
 
-**Model:** Facilities pay for qualified leads (contact form submissions, phone calls)
+**Model:** Installateurs betalen voor gekwalificeerde leads (offerte aanvragen, telefoongesprekken)
 
-| Lead Type | Estimated CPL | Notes |
-|-----------|---------------|-------|
-| Contact Form | $50-150 | Basic inquiry |
-| Phone Call (30s+) | $75-200 | Tracked via call tracking |
-| Insurance Verified | $150-300 | Pre-qualified lead |
-| Admission Inquiry | $200-500 | High intent |
+| Lead Type | Geschatte CPL | Opmerkingen |
+|-----------|---------------|-------------|
+| Offerte Aanvraag | EUR 15-50 | Basis aanvraag |
+| Telefoongesprek (30s+) | EUR 20-60 | Getrackt via call tracking |
+| Gekwalificeerde Lead | EUR 40-100 | Pre-qualified met details |
+| Zakelijke Aanvraag | EUR 75-200 | Meerdere laadpunten |
 
-**Implementation:**
-- [ ] Integrate call tracking (CallRail, Invoca)
-- [ ] Create lead capture forms on facility pages
-- [ ] Build CRM for lead management
-- [ ] Set up facility dashboard for lead access
-- [ ] Implement lead quality scoring
+**Implementatie:**
+- [ ] Integreer call tracking
+- [ ] Maak lead capture formulieren op installateur pagina's
+- [ ] Bouw CRM voor lead management
+- [ ] Stel installateur dashboard op voor lead toegang
+- [ ] Implementeer lead quality scoring
 
-**Projected Revenue:** $50,000-200,000/month at scale
+**Geprojecteerde Inkomsten:** EUR 10,000-50,000/maand bij schaal
 
 ---
 
-### 2. Featured Listings - Subscription Model
+### 2. Uitgelichte Vermeldingen - Abonnementsmodel
 
 **Tiers:**
 
-| Tier | Price/Month | Features |
+| Tier | Prijs/Maand | Features |
 |------|-------------|----------|
-| **Basic** | Free | Standard listing, basic info |
-| **Enhanced** | $299/mo | Logo, photos, extended description |
-| **Premium** | $599/mo | Top placement, highlighted, badge |
-| **Enterprise** | $999/mo | Multiple locations, analytics, dedicated support |
+| **Basis** | Gratis | Standaard vermelding, basis info |
+| **Uitgebreid** | EUR 99/ma | Logo, foto's, uitgebreide beschrijving |
+| **Premium** | EUR 199/ma | Top plaatsing, highlighted, badge |
+| **Enterprise** | EUR 399/ma | Meerdere locaties, analytics, dedicated support |
 
-**Features by Tier:**
+**Features per Tier:**
 
-**Enhanced ($299/mo):**
-- Custom facility logo
-- Up to 10 photos
-- Extended description (2000 chars)
-- Treatment programs details
-- Staff profiles
-- Response to reviews
+**Uitgebreid (EUR 99/ma):**
+- Custom bedrijfslogo
+- Tot 10 foto's van werk
+- Uitgebreide beschrijving (2000 tekens)
+- Diensten details
+- Certificeringen en keurmerken
+- Reageren op reviews
 
-**Premium ($599/mo):**
-- Everything in Enhanced
-- "Featured" badge
-- Top 3 placement in search results
-- Priority in city/state pages
+**Premium (EUR 199/ma):**
+- Alles in Uitgebreid
+- "Uitgelicht" badge
+- Top 3 plaatsing in zoekresultaten
+- Prioriteit in stad/provincie pagina's
 - Click-through analytics
 - Lead source tracking
 
-**Enterprise ($999/mo):**
-- Everything in Premium
-- Multiple location management
-- API access for lead integration
+**Enterprise (EUR 399/ma):**
+- Alles in Premium
+- Meerdere locaties management
+- API toegang voor lead integratie
 - Dedicated account manager
-- Quarterly performance reviews
+- Kwartaal performance reviews
 - Custom landing pages
 
-**Projected Revenue:** $20,000-100,000/month with 100-500 paying facilities
+**Geprojecteerde Inkomsten:** EUR 5,000-30,000/maand met 50-200 betalende installateurs
 
 ---
 
 ### 3. Google AdSense - Display Advertising
 
-**Strategic Placements:**
-- Above search results (728x90 leaderboard)
-- Sidebar on facility pages (300x250)
-- In-article on guide pages (native)
+**Strategische Plaatsingen:**
+- Boven zoekresultaten (728x90 leaderboard)
+- Sidebar op installateur pagina's (300x250)
+- In-article op gids pagina's (native)
 - Footer banner (728x90)
 
-**Expected RPM:** $15-40 (health/medical niche)
+**Verwachte RPM:** EUR 5-15 (home improvement niche)
 
-**Traffic Projections:**
-| Monthly Visitors | Ad Revenue |
-|------------------|------------|
-| 10,000 | $150-400 |
-| 50,000 | $750-2,000 |
-| 100,000 | $1,500-4,000 |
-| 500,000 | $7,500-20,000 |
-
-**Implementation:**
-- [ ] Apply for AdSense approval
-- [ ] Configure ad units
-- [ ] Implement lazy loading for performance
-- [ ] A/B test placements
-- [ ] Monitor Core Web Vitals impact
+**Verkeer Projecties:**
+| Maandelijkse Bezoekers | Ad Inkomsten |
+|------------------------|--------------|
+| 10,000 | EUR 50-150 |
+| 50,000 | EUR 250-750 |
+| 100,000 | EUR 500-1,500 |
+| 500,000 | EUR 2,500-7,500 |
 
 ---
 
 ### 4. Affiliate Partnerships
 
-**Potential Partners:**
+**Potentiele Partners:**
 
-| Partner Type | Commission Model | Estimated Revenue |
-|--------------|------------------|-------------------|
-| Insurance Verification Services | $25-50/verification | $5,000-20,000/mo |
-| Intervention Services | $100-300/referral | $2,000-10,000/mo |
-| Recovery Apps (Sober Grid, etc.) | $5-15/install | $1,000-5,000/mo |
-| Recovery Books (Amazon) | 4-8% of sale | $500-2,000/mo |
-| Sober Living Directories | $50-100/referral | $2,000-8,000/mo |
-| Drug Testing Kits | 10-20% of sale | $500-2,000/mo |
-
-**Implementation:**
-- [x] Create AffiliateBottomBar component
-- [x] Create AffiliateSection component
-- [ ] Sign up for affiliate programs
-- [ ] Implement tracking pixels
-- [ ] Create dedicated landing pages
+| Partner Type | Commissie Model | Geschatte Inkomsten |
+|--------------|-----------------|---------------------|
+| Laadpaal Webshops | 3-8% van verkoop | EUR 500-2,000/ma |
+| Energie Vergelijkers | EUR 15-40/lead | EUR 1,000-5,000/ma |
+| Zonnepanelen Partners | EUR 25-75/lead | EUR 1,000-4,000/ma |
+| Thuisbatterij Partners | EUR 30-100/lead | EUR 500-2,000/ma |
+| Elektrische Auto Lease | EUR 50-150/lead | EUR 1,000-3,000/ma |
 
 ---
 
-### 5. Sponsored Content
+### 5. Gesponsorde Content
 
-**Options:**
+**Opties:**
 
-| Content Type | Price | Deliverables |
+| Content Type | Prijs | Deliverables |
 |--------------|-------|--------------|
-| Blog Post | $500-1,500 | 1000+ word article, SEO optimized |
-| Guide Sponsorship | $1,000-3,000 | Logo + mention in guide |
-| Newsletter Mention | $250-750 | Featured in email blast |
-| Facility Spotlight | $750-2,000 | Detailed facility profile |
-
-**Guidelines:**
-- All sponsored content marked as "Sponsored"
-- Must meet editorial standards
-- No false claims allowed
-- Subject to editorial review
+| Blog Post | EUR 200-500 | 1000+ woord artikel, SEO geoptimaliseerd |
+| Gids Sponsorship | EUR 400-1,000 | Logo + vermelding in gids |
+| Nieuwsbrief Mention | EUR 100-300 | Uitgelicht in email |
+| Installateur Spotlight | EUR 300-750 | Gedetailleerd bedrijfsprofiel |
 
 ---
 
-### 6. Data & API Access
+## Ethische Overwegingen
 
-**For Researchers & Healthcare Organizations:**
+### Wat We NIET Doen:
+- Betaling accepteren om zoekranglijsten te manipuleren
+- Valse of misleidende installateur informatie toestaan
+- Gebruikersdata delen zonder toestemming
+- Niet-gecertificeerde installateurs promoten
+- Kickbacks accepteren zonder disclosure
 
-| Package | Price | Access |
-|---------|-------|--------|
-| Basic API | $99/mo | 1,000 requests, basic data |
-| Professional | $299/mo | 10,000 requests, full data |
-| Enterprise | Custom | Unlimited, raw data access |
-
-**Data Products:**
-- Treatment facility database
-- Geographic coverage analysis
-- Treatment type trends
-- Insurance acceptance data
-
----
-
-## Ethical Considerations
-
-### What We Will NOT Do:
-- Accept payment to manipulate search rankings
-- Allow false or misleading facility information
-- Share user data without consent
-- Promote facilities with compliance issues
-- Accept kickbacks for referrals without disclosure
-
-### Transparency Commitments:
-- Clear disclosure of paid placements
-- Honest reviews and ratings
-- Equal opportunity for all facilities to be listed
-- Free basic listings always available
-- User privacy protection
+### Transparantie Beloftes:
+- Duidelijke disclosure van betaalde plaatsingen
+- Eerlijke reviews en beoordelingen
+- Gelijke kans voor alle installateurs om vermeld te worden
+- Gratis basis vermeldingen altijd beschikbaar
+- Gebruikersprivacy bescherming
 
 ---
 
-## Revenue Projections
+## Inkomsten Projecties
 
-### Year 1 Goals (Conservative)
+### Jaar 1 Doelen (Conservatief)
 
-| Revenue Stream | Monthly Target | Annual |
-|----------------|----------------|--------|
-| Featured Listings | $15,000 | $180,000 |
-| Pay-Per-Lead | $25,000 | $300,000 |
-| AdSense | $2,000 | $24,000 |
-| Affiliates | $3,000 | $36,000 |
-| **Total** | **$45,000** | **$540,000** |
+| Inkomstenstroom | Maandelijks Doel | Jaarlijks |
+|-----------------|------------------|-----------|
+| Uitgelichte Vermeldingen | EUR 5,000 | EUR 60,000 |
+| Pay-Per-Lead | EUR 8,000 | EUR 96,000 |
+| AdSense | EUR 500 | EUR 6,000 |
+| Affiliates | EUR 1,500 | EUR 18,000 |
+| **Totaal** | **EUR 15,000** | **EUR 180,000** |
 
-### Year 2 Goals (Growth)
+### Jaar 2 Doelen (Groei)
 
-| Revenue Stream | Monthly Target | Annual |
-|----------------|----------------|--------|
-| Featured Listings | $50,000 | $600,000 |
-| Pay-Per-Lead | $100,000 | $1,200,000 |
-| AdSense | $10,000 | $120,000 |
-| Affiliates | $10,000 | $120,000 |
-| Sponsored Content | $5,000 | $60,000 |
-| **Total** | **$175,000** | **$2,100,000** |
-
----
-
-## Implementation Priority
-
-### Phase 1 (Month 1-3)
-1. Apply for AdSense
-2. Set up featured listing tiers
-3. Implement basic lead capture
-
-### Phase 2 (Month 4-6)
-1. Launch PPL program with 10 pilot facilities
-2. Sign affiliate partnerships
-3. Build facility dashboard
-
-### Phase 3 (Month 7-12)
-1. Scale PPL to 100+ facilities
-2. Launch call tracking
-3. Implement insurance verification affiliate
-4. Launch API product
+| Inkomstenstroom | Maandelijks Doel | Jaarlijks |
+|-----------------|------------------|-----------|
+| Uitgelichte Vermeldingen | EUR 15,000 | EUR 180,000 |
+| Pay-Per-Lead | EUR 30,000 | EUR 360,000 |
+| AdSense | EUR 3,000 | EUR 36,000 |
+| Affiliates | EUR 5,000 | EUR 60,000 |
+| Gesponsorde Content | EUR 2,000 | EUR 24,000 |
+| **Totaal** | **EUR 55,000** | **EUR 660,000** |
 
 ---
 
-## Competitive Analysis
+## Implementatie Prioriteit
 
-| Competitor | Primary Revenue | Estimated Revenue |
-|------------|-----------------|-------------------|
-| Rehabs.com | PPL, Ads | $5-10M/year |
-| AddictionCenter.com | PPL, Featured | $10-20M/year |
-| DrugAbuse.com | Ads, Affiliate | $2-5M/year |
-| SAMHSA (gov) | N/A (free) | N/A |
+### Fase 1 (Maand 1-3)
+1. Aanvragen voor AdSense
+2. Uitgelichte vermelding tiers opzetten
+3. Basis lead capture implementeren
 
-**Our Advantage:** Modern tech stack, better UX, local SEO focus, transparent practices.
+### Fase 2 (Maand 4-6)
+1. PPL programma lanceren met 10 pilot installateurs
+2. Affiliate partnerships tekenen
+3. Installateur dashboard bouwen
 
----
-
-## Key Metrics to Track
-
-- **Traffic:** Monthly visitors, page views, bounce rate
-- **Leads:** Form submissions, phone calls, quality score
-- **Revenue:** RPM, CPL, MRR from subscriptions
-- **Facilities:** Active listings, paying customers, churn rate
-- **SEO:** Rankings, organic traffic, domain authority
+### Fase 3 (Maand 7-12)
+1. PPL schalen naar 100+ installateurs
+2. Call tracking lanceren
+3. Energie vergelijker affiliate implementeren
+4. API product lanceren
 
 ---
 
-## Next Steps
+## Volgende Stappen
 
-1. [ ] Validate pricing with facility owners
-2. [ ] Build payment integration (Stripe)
-3. [ ] Create sales materials
-4. [ ] Hire sales representative
-5. [ ] Launch beta with 20 facilities
+1. [ ] Prijzen valideren met installateurs
+2. [ ] Betaal integratie bouwen (Stripe/Mollie)
+3. [ ] Sales materialen maken
+4. [ ] Sales vertegenwoordiger inhuren
+5. [ ] Beta lanceren met 20 installateurs
 
 ---
 
-*This strategy will be reviewed and updated quarterly based on market conditions and performance data.*
+*Deze strategie wordt per kwartaal gereviewed en bijgewerkt op basis van marktomstandigheden en performance data.*

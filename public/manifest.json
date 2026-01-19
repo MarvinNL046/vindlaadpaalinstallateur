@@ -1,14 +1,14 @@
 {
-  "name": "Rehab Near Me",
-  "short_name": "Rehab",
-  "description": "Find rehabilitation and addiction treatment centers near you. Search for rehab facilities across the United States with ratings, reviews, and directions.",
+  "name": "VindLaadpaalInstallateur",
+  "short_name": "Laadpaal",
+  "description": "Vind laadpaal installateurs bij jou in de buurt. Zoek gecertificeerde installateurs in heel Nederland met reviews, beoordelingen en contactgegevens.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a2e",
-  "theme_color": "#1a1a2e",
+  "background_color": "#22C55E",
+  "theme_color": "#22C55E",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en",
+  "lang": "nl",
   "categories": ["lifestyle", "utilities"],
   "icons": [
     {
@@ -73,22 +73,22 @@
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Search"
+      "label": "Zoeken"
     }
   ],
   "shortcuts": [
     {
-      "name": "Search",
-      "short_name": "Search",
-      "description": "Search for a rehab facility",
-      "url": "/search",
+      "name": "Zoeken",
+      "short_name": "Zoeken",
+      "description": "Zoek een laadpaal installateur",
+      "url": "/zoeken",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
-      "name": "Near Me",
-      "short_name": "Nearby",
-      "description": "Find rehab facilities near me",
-      "url": "/search?nearby=true",
+      "name": "In de Buurt",
+      "short_name": "Dichtbij",
+      "description": "Vind installateurs bij jou in de buurt",
+      "url": "/zoeken?nearby=true",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ]

@@ -11,28 +11,28 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "What is inpatient rehab?",
-    answer: "Inpatient rehab, also known as residential treatment, is a program where patients live at the treatment facility 24/7 while receiving intensive care. This includes medical supervision, individual and group therapy, medication management, and structured daily activities. Inpatient programs typically last 30, 60, or 90 days and are ideal for severe addictions or those who need a safe, substance-free environment."
+    question: "Wat kost een laadpaal thuis?",
+    answer: "De kosten voor een thuislader variëren van €800 tot €2.500, afhankelijk van het merk, vermogen en extra functies. Installatie kost meestal €300-€600. Populaire merken zoals Alfen, EVBox en Wallbox bieden modellen in verschillende prijsklassen. Let ook op mogelijke subsidies zoals de SEEH-regeling die tot €1.000 bijdraagt aan de kosten."
   },
   {
-    question: "How long does addiction treatment take?",
-    answer: "Treatment duration varies based on individual needs, substance type, and addiction severity. Short-term programs typically last 28-30 days, while standard programs run 60-90 days. Long-term residential treatment can last 6-12 months. Research shows longer treatment periods often lead to better outcomes. Many people also continue with outpatient care and support groups after completing initial treatment."
+    question: "Hoeveel kW laadpaal heb ik nodig?",
+    answer: "Voor thuisgebruik is een 11 kW laadpaal meestal voldoende. Dit laadt een gemiddelde elektrische auto in 4-6 uur volledig op. Een 22 kW lader is sneller maar vereist vaak een zwaardere aansluiting. Voor de meeste huishoudens volstaat 7,4 kW of 11 kW, aangezien de auto 's nachts toch laadt."
   },
   {
-    question: "Does insurance cover rehab?",
-    answer: "Yes, most health insurance plans cover addiction treatment thanks to the Affordable Care Act and Mental Health Parity Act. Coverage typically includes detox, inpatient rehab, outpatient treatment, and medications. The extent of coverage varies by plan, so it's important to verify benefits with your insurance provider. Many treatment centers also offer payment plans or sliding scale fees for those without insurance."
+    question: "Heb ik een vergunning nodig voor een laadpaal?",
+    answer: "Voor een laadpaal op eigen terrein is meestal geen vergunning nodig. Bij plaatsing in de openbare ruimte of bij een VvE moet u wel toestemming vragen. Een gecertificeerde installateur kan u adviseren over de lokale regelgeving en eventuele vergunningsaanvragen."
   },
   {
-    question: "What's the difference between inpatient and outpatient treatment?",
-    answer: "Inpatient treatment requires living at the facility full-time with 24/7 medical supervision and structured programming. Outpatient treatment allows patients to live at home while attending scheduled therapy sessions. Intensive Outpatient Programs (IOP) typically involve 9-20 hours of treatment per week. Inpatient is recommended for severe addictions, while outpatient suits those with milder addictions, strong support systems, or work/family obligations."
+    question: "Wat is slim laden?",
+    answer: "Slim laden (smart charging) optimaliseert automatisch wanneer uw auto laadt op basis van energietarieven, netbelasting of beschikbare zonne-energie. Hiermee kunt u tot 30% besparen op laadkosten door te laden wanneer stroom het goedkoopst is, bijvoorbeeld 's nachts of wanneer uw zonnepanelen veel produceren."
   },
   {
-    question: "What happens during detox?",
-    answer: "Detox is the process of safely removing substances from your body under medical supervision. It typically lasts 3-10 days depending on the substance. Medical staff monitor vital signs, manage withdrawal symptoms, and may administer medications to ease discomfort and prevent complications. Symptoms can include nausea, anxiety, tremors, and insomnia. Detox alone is not treatment; it's the first step before comprehensive addiction therapy begins."
+    question: "Kan ik mijn laadpaal koppelen aan zonnepanelen?",
+    answer: "Ja, veel moderne laadpalen ondersteunen integratie met zonnepanelen. Met een energiemanagementsysteem laadt uw auto automatisch wanneer uw panelen stroom opwekken. Dit maximaliseert het gebruik van gratis zonne-energie en vermindert teruglevering aan het net."
   },
   {
-    question: "How do I choose the right treatment center?",
-    answer: "Consider these factors when choosing a rehab: accreditation and licensing, treatment approaches offered (evidence-based therapies like CBT, DBT), staff credentials, specialized programs for your specific addiction, location preferences, insurance acceptance, aftercare planning, and amenities. Visit facilities if possible, read reviews, and ask about success rates. The right center should address your physical, mental, and emotional needs while fitting your personal circumstances."
+    question: "Hoe kies ik de juiste laadpaal installateur?",
+    answer: "Let bij het kiezen van een installateur op: certificeringen (NEN 1010, Uneto-VNI), ervaring met uw gewenste merk, reviews van eerdere klanten, garantievoorwaarden en of ze complete service bieden inclusief groepenkast uitbreiding indien nodig. Vraag altijd meerdere offertes aan om prijzen en service te vergelijken."
   }
 ];
 
@@ -68,7 +68,7 @@ export default function FAQSection() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">Veelgestelde Vragen</h2>
         <div className="max-w-3xl mx-auto space-y-4">
           {faqItems.map((item, index) => (
             <Card key={index} className="overflow-hidden">

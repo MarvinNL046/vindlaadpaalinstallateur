@@ -1,75 +1,75 @@
-# Facility Data Filtering Documentation
+# Installateur Data Filtering Documentatie
 
-## Overview
-This document explains the filtering process implemented to ensure only actual rehabilitation facilities are included in the dataset, removing non-facility businesses that appeared in the raw data.
+## Overzicht
+Dit document beschrijft het filterproces dat is geimplementeerd om alleen echte laadpaal installateurs in de dataset op te nemen, door niet-relevante bedrijven uit de ruwe data te verwijderen.
 
-## Problem
-The original dataset may contain entries that are not actual rehab facilities. These could include:
-- Medical practices that don't offer addiction treatment
-- General hospitals without specialized rehab programs
-- Non-treatment businesses with rehab-related words in their names
-- Wellness spas or fitness centers
+## Probleem
+De originele dataset kan bedrijven bevatten die geen echte laadpaal installateurs zijn. Deze kunnen omvatten:
+- Elektriciens die geen laadpalen installeren
+- Algemene aannemers zonder laadpaal specialisatie
+- Niet-installatie bedrijven met laadpaal-gerelateerde woorden in hun naam
+- Autodealers of autobedrijven
 
-## Solution
-We implemented a comprehensive filtering system that:
-1. Identifies and excludes non-facility businesses based on keywords
-2. Identifies and excludes non-treatment services
-3. Preserves actual rehabilitation and treatment facilities
-4. Uses positive identification for facility-related keywords
+## Oplossing
+We hebben een uitgebreid filtersysteem geimplementeerd dat:
+1. Niet-installateur bedrijven identificeert en uitsluit op basis van keywords
+2. Niet-relevante diensten identificeert en uitsluit
+3. Echte laadpaal installateurs en elektrotechnische bedrijven behoudt
+4. Positieve identificatie gebruikt voor installateur-gerelateerde keywords
 
-## Filtering Rules
+## Filterregels
 
-### Excluded Keywords (Non-Facility Businesses)
-- **Non-treatment medical**: general hospital, urgent care, primary care, dental
-- **Wellness/fitness**: spa, gym, fitness, yoga studio, meditation center
-- **General businesses**: hotel, motel, restaurant, cafe
+### Uitgesloten Keywords (Niet-Installateur Bedrijven)
+- **Niet-installatie bedrijven**: autodealer, autogarage, tankstation
+- **Algemene winkels**: bouwmarkt, doe-het-zelf, webshop
+- **Niet-gerelateerde diensten**: verhuur, lease
 
-### Included Facility Keywords
-- rehab, rehabilitation, treatment center, recovery
-- Specific types: inpatient, outpatient, detox
-- Programs: addiction, substance abuse, mental health
-- General: treatment facility, recovery center
+### Opgenomen Installateur Keywords
+- laadpaal installateur, EV installateur, elektrisch rijden specialist
+- Specifieke types: thuislader, zakelijke laadpaal, snellader
+- Diensten: laadpaal installatie, oplaadpunt installatie, smart charging
+- Algemeen: elektrotechnisch bedrijf, installatiebedrijf
 
-### Special Handling
-- **Treatment Centers**: Included by default
-- **Mixed names**: If a business name contains both excluded and facility keywords, facility keywords take precedence
+### Speciale Behandeling
+- **Gecertificeerde Installateurs**: Standaard opgenomen
+- **Gemengde namen**: Als een bedrijfsnaam zowel uitgesloten als installateur keywords bevat, krijgen installateur keywords voorrang
 
-## Results
-- **Original entries**: 6,548
-- **Filtered entries**: 3,861 (actual facilities)
-- **Removed entries**: 2,687 (non-facility businesses)
+## Resultaten
+- **Originele entries**: Variabel
+- **Gefilterde entries**: Alleen echte installateurs
+- **Verwijderde entries**: Niet-installateur bedrijven
 
-## Implementation
+## Implementatie
 
 ### Standalone Filter Script
-`scripts/filter-non-facilities.ts` - Can be run independently to filter data
+`scripts/filter-non-installers.ts` - Kan onafhankelijk worden uitgevoerd om data te filteren
 
-### Integrated Filtering
-The filtering logic is integrated into:
-- `scripts/process-facility-data.ts`
+### Geintegreerde Filtering
+De filterlogica is geintegreerd in:
+- `scripts/process-installer-data.ts`
 - `scripts/process-all-data.ts`
 
-### Usage
+### Gebruik
 ```bash
-# Run standalone filter
-npx tsx scripts/filter-non-facilities.ts
+# Voer standalone filter uit
+npx tsx scripts/filter-non-installers.ts
 
-# Process facility data with filtering
-npx tsx scripts/process-all-data.ts facility data/facilities.csv
+# Verwerk installateur data met filtering
+npx tsx scripts/process-all-data.ts installer data/installers.csv
 
-# Build production data
+# Build productie data
 npm run build-data
 ```
 
-## Files Created
-- `data/facilities-filtered.csv` - Filtered facility data
-- `data/removed-entries.json` - List of removed entries for review
-- `data/facilities-processed.json` - Processed facility data
-- `public/data/facilities.json` - Production-ready data
+## Aangemaakte Bestanden
+- `data/installers-filtered.csv` - Gefilterde installateur data
+- `data/removed-entries.json` - Lijst van verwijderde entries voor review
+- `data/installers-processed.json` - Verwerkte installateur data
+- `public/data/installers.json` - Productie-klare data
 
-## Maintenance
-To update filtering rules:
-1. Edit the keyword arrays in the filter functions
-2. Test with sample data to ensure no valid facilities are excluded
-3. Review `removed-entries.json` to verify filtering accuracy
-4. Update this documentation with any changes
+## Onderhoud
+Om filterregels bij te werken:
+1. Bewerk de keyword arrays in de filter functies
+2. Test met sample data om te zorgen dat geen geldige installateurs worden uitgesloten
+3. Review `removed-entries.json` om filternauwkeurigheid te verifieren
+4. Update deze documentatie met eventuele wijzigingen

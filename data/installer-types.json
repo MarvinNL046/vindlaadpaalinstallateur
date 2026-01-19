@@ -1,0 +1,64 @@
+{
+  "types": [
+    {
+      "slug": "thuislader-installateur",
+      "name": "Thuislader Installateur",
+      "description": "Specialisten in het installeren van laadpalen voor particulieren aan huis, inclusief meterkast aanpassing en veiligheidskeuring.",
+      "search_terms": ["thuislader installatie", "laadpaal thuis", "home charger", "particuliere laadpaal", "EV lader thuis"]
+    },
+    {
+      "slug": "zakelijke-laadpaal-installateur",
+      "name": "Zakelijke Laadpaal Installateur",
+      "description": "Experts in laadinfrastructuur voor bedrijven, inclusief meerdere laadpunten, load balancing en back-office systemen.",
+      "search_terms": ["zakelijke laadpaal", "bedrijfslaadpaal", "laadpaal bedrijf", "commercial charger", "fleet charging"]
+    },
+    {
+      "slug": "snellader-installateur",
+      "name": "Snellader Installateur",
+      "description": "Gespecialiseerd in DC snelladers (50kW+) voor publieke locaties, tankstations en snelwegen.",
+      "search_terms": ["snellader installatie", "DC lader", "fast charger", "snellaadstation", "CCS installatie"]
+    },
+    {
+      "slug": "vve-laadpaal-specialist",
+      "name": "VvE Laadpaal Specialist",
+      "description": "Experts in laadoplossingen voor Verenigingen van Eigenaren en appartementencomplexen met gedeelde parkeervoorzieningen.",
+      "search_terms": ["VvE laadpaal", "appartement laadpaal", "parkeergarage laadpaal", "gedeelde laadpaal", "collectieve laadoplossing"]
+    },
+    {
+      "slug": "zonnepanelen-laadpaal-combo",
+      "name": "Zonnepanelen + Laadpaal Combinatie",
+      "description": "Installateurs die zowel zonnepanelen als laadpalen installeren voor optimale eigen opwek en verbruik.",
+      "search_terms": ["zonnepanelen laadpaal", "solar charging", "eigen stroom laden", "PV laadpaal", "groene stroom laden"]
+    },
+    {
+      "slug": "slim-laden-specialist",
+      "name": "Slim Laden Specialist",
+      "description": "Experts in smart charging oplossingen met dynamische tarieven, load balancing en energiemanagement.",
+      "search_terms": ["slim laden", "smart charging", "dynamisch laden", "load balancing", "energiemanagement"]
+    },
+    {
+      "slug": "publieke-laadpaal-installateur",
+      "name": "Publieke Laadpaal Installateur",
+      "description": "Specialisten in openbare laadinfrastructuur voor gemeentes, parkeerterreinen en openbare ruimtes.",
+      "search_terms": ["publieke laadpaal", "openbare laadpaal", "straatlaadpaal", "gemeente laadpaal", "public charging"]
+    },
+    {
+      "slug": "fleet-charging-specialist",
+      "name": "Fleet Charging Specialist",
+      "description": "Experts in laadinfrastructuur voor wagenparken en logistieke bedrijven met meerdere elektrische voertuigen.",
+      "search_terms": ["fleet charging", "wagenpark laden", "depot charging", "logistiek laden", "elektrische vloot"]
+    },
+    {
+      "slug": "bidirectioneel-laden-specialist",
+      "name": "Bidirectioneel Laden Specialist",
+      "description": "Specialisten in V2G (Vehicle-to-Grid) en V2H (Vehicle-to-Home) technologie voor tweerichtings laden.",
+      "search_terms": ["bidirectioneel laden", "V2G", "V2H", "vehicle to grid", "tweerichtings laden"]
+    },
+    {
+      "slug": "elektrotechnisch-installateur",
+      "name": "Elektrotechnisch Installateur",
+      "description": "Gecertificeerde elektriciens met ervaring in laadpaal installaties en meterkast uitbreidingen.",
+      "search_terms": ["elektricien laadpaal", "elektrotechnisch", "meterkast uitbreiding", "groepenkast", "NEN 1010"]
+    }
+  ]
+}

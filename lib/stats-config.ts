@@ -1,105 +1,105 @@
 /**
- * Central Statistics Configuration for RehabNearMe.com
+ * Centrale Statistieken Configuratie voor VindLaadpaalInstallateur.nl
  *
- * Update these values in ONE place when data changes.
- * All components and pages import from here.
+ * Update deze waarden op EEN plek wanneer data verandert.
+ * Alle componenten en pagina's importeren hieruit.
  *
- * Last update: 2025-01-18
- * - Initial setup for addiction treatment facility directory
+ * Laatst bijgewerkt: 2025-01-19
+ * - Aangepast voor laadpaal installateur directory
  */
 
 export const SITE_STATS = {
-  // Display values (formatted for UI)
-  totalFacilitiesDisplay: '15,000',  // Estimated treatment facilities
-  totalFacilitiesExact: 15000,
+  // Weergave waarden (geformatteerd voor UI)
+  totalInstallateursDisplay: '500+',
+  totalInstallateursExact: 500,
 
-  // Geographic coverage
-  totalStates: 50,
-  totalStatesWithDC: 51,  // 50 states + DC
-  totalCounties: 3143,    // US counties
+  // Geografische dekking - Nederland
+  totalProvinces: 12,
+  totalGemeentes: 342,
+  totalSteden: 1500,
 
-  // Dynamic placeholder (when API hasn't loaded yet)
-  facilitiesPlaceholder: '15,000+',
+  // Dynamische placeholder (wanneer API nog niet geladen is)
+  installateursPlaceholder: '500+',
 
   // Site info
-  siteName: 'RehabNearMe',
-  siteUrl: 'https://www.rehabnearbyme.com',
-  country: 'United States',
-  countryShort: 'USA',
+  siteName: 'VindLaadpaalInstallateur',
+  siteUrl: 'https://www.vindlaadpaalinstallateur.nl',
+  country: 'Nederland',
+  countryShort: 'NL',
 
-  // Treatment facility stats
-  inpatientCentersCount: 4500,
-  outpatientCentersCount: 8000,
-  detoxCentersCount: 2500,
-  soberLivingCount: 3000,
+  // Service type statistieken
+  thuisladerInstallateurs: 400,
+  zakelijkeInstallateurs: 250,
+  slimLadenSpecialisten: 150,
+  snelladerInstallateurs: 50,
 
-  // Recovery statistics (SAMHSA data)
-  americansInRecovery: '23 million',
-  annualAdmissions: '1.5 million',
-  substanceUseDisorderRate: '10%',
+  // EV markt statistieken Nederland
+  evRijdersNederland: '500.000+',
+  laadpalenNederland: '150.000+',
+  groeiPercentage: '30%',
 
-  // Top states by facility count
-  topStates: {
-    california: 2100,
-    florida: 1800,
-    texas: 1200,
-    newYork: 1100,
-    pennsylvania: 900,
+  // Top provincies op aantal installateurs
+  topProvinces: {
+    noordHolland: 80,
+    zuidHolland: 90,
+    noordBrabant: 60,
+    gelderland: 50,
+    utrecht: 45,
   },
 
-  // Treatment types
-  treatmentTypesCount: 12,
-  insuranceProvidersAccepted: 500,
-  totalReviewsDisplay: '25,000+',
+  // Dienst types
+  serviceTypesCount: 12,
+  merkenCount: 15,
+  totalReviewsDisplay: '5.000+',
 } as const;
 
 /**
- * Get formatted stats description for SEO and meta tags
+ * Krijg geformatteerde statistieken beschrijving voor SEO en meta tags
  */
 export function getStatsDescription(variant: 'short' | 'long' | 'seo' = 'short'): string {
   switch (variant) {
     case 'short':
-      return `Find treatment facilities across all ${SITE_STATS.totalStates} states.`;
+      return `Vind laadpaal installateurs in alle ${SITE_STATS.totalProvinces} provincies.`;
     case 'long':
-      return `Search our comprehensive database of ${SITE_STATS.totalFacilitiesDisplay}+ addiction treatment centers, rehabilitation facilities, and detox programs across all ${SITE_STATS.totalStates} states in the ${SITE_STATS.country}.`;
+      return `Doorzoek ons uitgebreide netwerk van ${SITE_STATS.totalInstallateursDisplay} gecertificeerde laadpaal installateurs in alle ${SITE_STATS.totalProvinces} provincies van ${SITE_STATS.country}.`;
     case 'seo':
-      return `Find addiction treatment centers, rehab facilities, and detox programs near you. Search by state, city, or zip code. Get verified information, insurance details, and reviews for treatment centers across the ${SITE_STATS.country}.`;
+      return `Vind de beste laadpaal installateur bij jou in de buurt. Vergelijk installateurs, bekijk reviews en vraag gratis offertes aan voor thuisladers en zakelijke laadpalen in heel Nederland.`;
     default:
-      return `Find treatment facilities across all ${SITE_STATS.totalStates} states.`;
+      return `Vind laadpaal installateurs in alle ${SITE_STATS.totalProvinces} provincies.`;
   }
 }
 
 /**
- * Get CTA stats text for blog pages and promotional sections
+ * Krijg CTA statistieken tekst voor blog pagina's en promotionele secties
  */
 export function getCtaStatsText(): string {
-  return `Search directly for treatment centers in our extensive database with more than ${SITE_STATS.totalFacilitiesDisplay} facilities.`;
+  return `Zoek direct in ons uitgebreide netwerk van meer dan ${SITE_STATS.totalInstallateursDisplay} laadpaal installateurs.`;
 }
 
 /**
- * Get FAQ answer about facility count
+ * Krijg FAQ antwoord over aantal installateurs
  */
-export function getFaqFacilitiesAnswer(): string {
-  return `The ${SITE_STATS.country} has approximately ${SITE_STATS.totalFacilitiesDisplay} addiction treatment facilities, including inpatient rehab centers, outpatient programs, detox centers, and sober living homes. These facilities are spread across all ${SITE_STATS.totalStates} states, offering various treatment approaches and specializations.`;
+export function getFaqInstallateursAnswer(): string {
+  return `${SITE_STATS.country} heeft meer dan ${SITE_STATS.totalInstallateursDisplay} gecertificeerde laadpaal installateurs, verspreid over alle ${SITE_STATS.totalProvinces} provincies. Deze installateurs bieden diverse diensten zoals thuislader installatie, zakelijke laadoplossingen, slim laden en zonnepanelen integratie.`;
 }
 
 /**
- * Get "why us" feature text
+ * Krijg "waarom ons" feature tekst
  */
 export function getComprehensiveDataText(): string {
-  return `Information on treatment facilities across all ${SITE_STATS.totalStates} states with verified details, insurance information, and contact details.`;
+  return `Informatie over laadpaal installateurs in alle ${SITE_STATS.totalProvinces} provincies met geverifieerde gegevens, certificeringen en contactinformatie.`;
 }
 
 /**
- * Get states message for empty state pages
+ * Krijg provincies bericht voor lege provincie pagina's
  */
-export function getStatesComingSoonText(): string {
-  return `We're actively adding treatment facility data for all ${SITE_STATS.totalStates} states. Check back soon for updates!`;
+export function getProvincesComingSoonText(): string {
+  return `We voegen actief laadpaal installateur data toe voor alle ${SITE_STATS.totalProvinces} provincies. Kom snel terug voor updates!`;
 }
 
 /**
- * Get recovery statistics text
+ * Krijg EV markt statistieken tekst
  */
-export function getRecoveryStatsText(): string {
-  return `Over ${SITE_STATS.americansInRecovery} Americans are in recovery from addiction. With ${SITE_STATS.annualAdmissions} treatment admissions annually, finding the right facility is crucial for successful recovery.`;
+export function getEvMarketStatsText(): string {
+  return `Met meer dan ${SITE_STATS.evRijdersNederland} elektrische rijders in Nederland en ${SITE_STATS.laadpalenNederland} laadpunten groeit de vraag naar thuisladers met ${SITE_STATS.groeiPercentage} per jaar.`;
 }

@@ -1,15 +1,15 @@
-# RehabNearByMe.com
+# VindLaadpaalInstallateur.nl
 
-A comprehensive online directory for finding rehabilitation and addiction treatment centers in the United States.
+Een uitgebreide online directory voor het vinden van laadpaal installateurs in Nederland.
 
 ## Project Status
 
-Active development - building a comprehensive database of treatment facilities.
+Actieve ontwikkeling - bouwen aan een uitgebreide database van laadpaal installateurs.
 
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
+- **Taal**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui
 - **Database**: Supabase / Drizzle ORM
@@ -17,36 +17,43 @@ Active development - building a comprehensive database of treatment facilities.
 ## Development
 
 ```bash
-# Install dependencies
+# Installeer dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
 
-# Build for production
+# Build voor productie
 npm run build
 
-# Start production server
+# Start productie server
 npm run start
 ```
 
-## Project Structure
+## Project Structuur
 
 ```
 ├── app/                    # Next.js app directory
-│   ├── facility/          # Facility detail pages
-│   ├── city/              # City overview pages
-│   ├── county/            # County overview pages
-│   ├── state/             # State overview pages
-│   └── search/            # Search functionality
-├── components/            # React components
-├── data/                  # Database files
-├── public/               # Static assets
-└── docs/                 # Documentation
-    └── archive/          # Archived documentation
+│   ├── installateur/      # Installateur detail pagina's
+│   ├── stad/              # Stad overzichtspagina's
+│   ├── gemeente/          # Gemeente overzichtspagina's
+│   ├── provincie/         # Provincie overzichtspagina's
+│   └── zoeken/            # Zoekfunctionaliteit
+├── components/            # React componenten
+├── data/                  # Database bestanden
+├── public/               # Statische assets
+└── docs/                 # Documentatie
 ```
+
+## Features
+
+- Zoeken op locatie (stad, gemeente, provincie)
+- Filteren op laadpaal type (thuislader, zakelijk, openbaar)
+- Filteren op merk (Alfen, ABB, Wallbox, EVBox, etc.)
+- Installateur beoordelingen en reviews
+- Certificeringen en keurmerken
 
 ## Contact
 
-- Website: https://rehabnearbyme.com
-- Email: info@rehabnearbyme.com
+- Website: https://vindlaadpaalinstallateur.nl
+- Email: info@vindlaadpaalinstallateur.nl

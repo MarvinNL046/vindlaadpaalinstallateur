@@ -24,14 +24,14 @@ export const verificationCodes = pgTable('verification_codes', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
 });
 
-// Business claims table
+// Business claims table - for installateurs claiming their listing
 export const businessClaims = pgTable('business_claims', {
   id: serial('id').primaryKey(),
   userId: integer('user_id').notNull().references(() => users.id),
-  facilitySlug: varchar('facility_slug', { length: 255 }).notNull(),
-  facilityName: varchar('facility_name', { length: 255 }).notNull(),
+  installateurSlug: varchar('installateur_slug', { length: 255 }).notNull(),
+  installateurName: varchar('installateur_name', { length: 255 }).notNull(),
   status: varchar('status', { length: 50 }).notNull().default('pending'), // pending, approved, rejected
-  jobTitle: varchar('job_title', { length: 255 }), // manager, owner, employee
+  jobTitle: varchar('job_title', { length: 255 }), // eigenaar, directeur, medewerker
   companyName: varchar('company_name', { length: 255 }),
   message: text('message'), // Why they're claiming
   verificationMethod: varchar('verification_method', { length: 50 }), // email, phone, document
@@ -47,7 +47,7 @@ export const businessEdits = pgTable('business_edits', {
   id: serial('id').primaryKey(),
   claimId: integer('claim_id').notNull().references(() => businessClaims.id),
   userId: integer('user_id').notNull().references(() => users.id),
-  facilitySlug: varchar('facility_slug', { length: 255 }).notNull(),
+  installateurSlug: varchar('installateur_slug', { length: 255 }).notNull(),
   fieldName: varchar('field_name', { length: 100 }).notNull(),
   oldValue: text('old_value'),
   newValue: text('new_value'),
@@ -64,22 +64,22 @@ export const sessions = pgTable('sessions', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
 });
 
-// User-submitted facilities
-export const userFacilities = pgTable('user_facilities', {
+// User-submitted installateurs
+export const userInstallateurs = pgTable('user_installateurs', {
   id: serial('id').primaryKey(),
   userId: integer('user_id').notNull().references(() => users.id),
 
   // Basic info
   name: varchar('name', { length: 255 }).notNull(),
   slug: varchar('slug', { length: 255 }).notNull().unique(),
-  type: varchar('type', { length: 100 }).notNull().default('treatment center'),
+  type: varchar('type', { length: 100 }).notNull().default('laadpaal installateur'),
 
-  // Location
+  // Location - Dutch geography
   address: varchar('address', { length: 255 }),
-  zipCode: varchar('zip_code', { length: 10 }),
+  postcode: varchar('postcode', { length: 10 }),
   city: varchar('city', { length: 100 }).notNull(),
-  county: varchar('county', { length: 100 }).notNull(),
-  state: varchar('state', { length: 50 }).notNull(),
+  gemeente: varchar('gemeente', { length: 100 }),
+  province: varchar('province', { length: 50 }).notNull(),
   gpsCoordinates: varchar('gps_coordinates', { length: 50 }),
 
   // Contact
@@ -90,8 +90,11 @@ export const userFacilities = pgTable('user_facilities', {
   // Details
   description: text('description'),
   openingHours: text('opening_hours'),
-  amenities: text('amenities'), // comma separated
+  serviceTypes: text('service_types'), // comma separated: thuislader, zakelijk, etc.
+  merken: text('merken'), // comma separated: Alfen, EVBox, Wallbox, etc.
+  certificeringen: text('certificeringen'), // comma separated: NEN 1010, Uneto-VNI, etc.
   yearEstablished: varchar('year_established', { length: 10 }),
+  kvkNummer: varchar('kvk_nummer', { length: 20 }),
 
   // Photos (JSON array of URLs)
   photos: text('photos'), // JSON array
@@ -129,7 +132,7 @@ export type BusinessClaim = typeof businessClaims.$inferSelect;
 export type NewBusinessClaim = typeof businessClaims.$inferInsert;
 export type BusinessEdit = typeof businessEdits.$inferSelect;
 export type Session = typeof sessions.$inferSelect;
-export type UserFacility = typeof userFacilities.$inferSelect;
-export type NewUserFacility = typeof userFacilities.$inferInsert;
+export type UserInstallateur = typeof userInstallateurs.$inferSelect;
+export type NewUserInstallateur = typeof userInstallateurs.$inferInsert;
 export type Feedback = typeof feedback.$inferSelect;
 export type NewFeedback = typeof feedback.$inferInsert;
