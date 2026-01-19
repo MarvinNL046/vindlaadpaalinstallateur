@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Rehab Near Me Guides',
-    default: 'Treatment Guides & Resources | Rehab Near Me',
+    template: '%s | VindLaadpaalInstallateur.nl Gidsen',
+    default: 'Laadpaal Gidsen & Informatie | VindLaadpaalInstallateur.nl',
   },
-  description: 'Expert guides on addiction treatment types, rehab options, insurance coverage, and recovery resources across America.',
+  description: 'Deskundige gidsen over laadpaal types, installatie opties, subsidies en slim laden informatie door heel Nederland.',
 };
 
 export default function GuideLayout({

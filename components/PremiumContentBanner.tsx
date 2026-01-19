@@ -11,45 +11,45 @@ export default function PremiumContentBanner() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <BookOpen className="w-6 h-6 text-primary" />
-              <span className="text-sm font-medium text-primary">FREE GUIDE</span>
+              <span className="text-sm font-medium text-primary">GRATIS GIDS</span>
             </div>
 
             <h3 className="text-2xl font-bold mb-3">
-              The Complete Guide to Addiction Treatment
+              De Complete Gids voor Laadpaal Installatie
             </h3>
 
             <p className="text-gray-700 mb-4">
-              Download our comprehensive guide with everything you need to know about:
+              Download onze uitgebreide gids met alles wat je moet weten over:
             </p>
 
             <ul className="space-y-2 mb-6">
               <li className="flex items-start gap-2">
-                <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                <span className="text-sm">Understanding treatment options and levels of care</span>
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <span className="text-sm">Verschillende laadpaal types en vermogen</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                <span className="text-sm">Insurance coverage and payment options</span>
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <span className="text-sm">Subsidies en fiscale voordelen</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                <span className="text-sm">What to expect during treatment</span>
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <span className="text-sm">Wat te verwachten tijdens de installatie</span>
               </li>
               <li className="flex items-start gap-2">
-                <CheckCircle className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
-                <span className="text-sm">Supporting a loved one through recovery</span>
+                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <span className="text-sm">Slim laden en zonnepanelen integratie</span>
               </li>
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/guide">
+              <Link href="/gids">
                 <Button size="lg" className="group">
                   <BookOpen className="w-5 h-5 mr-2" />
-                  View Treatment Guides
+                  Bekijk Laadpaal Gidsen
                 </Button>
               </Link>
               <p className="text-xs text-gray-500 self-center">
-                No registration required
+                Geen registratie nodig
               </p>
             </div>
           </div>

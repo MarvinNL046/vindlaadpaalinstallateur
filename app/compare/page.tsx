@@ -81,7 +81,7 @@ export default function ComparePage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center py-12">
-          <p>Loading treatment centers...</p>
+          <p>Laadpaal installateurs laden...</p>
         </div>
       </div>
     );
@@ -91,9 +91,9 @@ export default function ComparePage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto text-center py-12">
-          <h1 className="text-3xl font-bold mb-4">Compare Treatment Centers</h1>
+          <h1 className="text-3xl font-bold mb-4">Vergelijk Laadpaal Installateurs</h1>
           <p className="text-muted-foreground mb-8">
-            You haven&apos;t selected any treatment centers to compare yet.
+            Je hebt nog geen laadpaal installateurs geselecteerd om te vergelijken.
             Go to a facility page and click the &quot;Compare&quot; button.
           </p>
           <Link href="/">
@@ -110,7 +110,7 @@ export default function ComparePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold">Compare Treatment Centers</h1>
+        <h1 className="text-3xl font-bold">Vergelijk Laadpaal Installateurs</h1>
         <Button variant="outline" onClick={clearAll}>
           Clear all
         </Button>
@@ -303,7 +303,7 @@ export default function ComparePage() {
           </p>
           <Link href="/">
             <Button variant="outline">
-              Find more treatment centers
+              Vind meer installateurs
             </Button>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BookOpen, Heart, Shield, Brain, Users, Stethoscope } from 'lucide-react';
+import { BookOpen, Zap, Calculator, Battery, Car, Settings } from 'lucide-react';
 
 interface GuideLink {
   href: string;
@@ -12,94 +12,85 @@ interface GuideLink {
 // All available guides/pillar pages with their metadata
 const allGuides: GuideLink[] = [
   {
-    href: '/guide/types',
-    label: 'Types of Treatment Centers',
-    description: 'Learn about different treatment options, from inpatient to outpatient programs.',
-    icon: BookOpen,
-    keywords: ['type', 'types', 'category', 'kind', 'inpatient', 'outpatient']
+    href: '/gids/laadpaal-types',
+    label: 'Soorten Laadpalen',
+    description: 'Leer over de verschillende laadpaal types, van thuisladers tot snelladers.',
+    icon: Battery,
+    keywords: ['type', 'types', 'soort', 'thuislader', 'snellader', 'wallbox']
   },
   {
-    href: '/guide/addiction-treatment',
-    label: 'Addiction Treatment Guide',
-    description: 'Comprehensive guide to understanding addiction and treatment approaches.',
-    icon: Heart,
-    keywords: ['addiction', 'treatment', 'recovery', 'substance', 'abuse']
+    href: '/gids/installatie',
+    label: 'Installatie Gids',
+    description: 'Alles wat je moet weten over het installeren van een laadpaal thuis of op kantoor.',
+    icon: Settings,
+    keywords: ['installatie', 'installeren', 'plaatsen', 'montage']
   },
   {
-    href: '/guide/insurance',
-    label: 'Insurance & Payment Options',
-    description: 'Understanding insurance coverage and payment options for treatment.',
-    icon: Shield,
-    keywords: ['insurance', 'payment', 'cost', 'coverage', 'medicaid', 'medicare']
+    href: '/gids/subsidies',
+    label: 'Subsidies en Voordelen',
+    description: 'Overzicht van subsidies en fiscale voordelen voor laadpaal installatie.',
+    icon: Calculator,
+    keywords: ['subsidie', 'korting', 'belasting', 'voordeel', 'seeh', 'isde']
   },
   {
-    href: '/guide/mental-health',
-    label: 'Mental Health & Dual Diagnosis',
-    description: 'Information about co-occurring mental health and addiction treatment.',
-    icon: Brain,
-    keywords: ['mental', 'health', 'dual', 'diagnosis', 'depression', 'anxiety']
+    href: '/gids/slim-laden',
+    label: 'Slim Laden',
+    description: 'Informatie over slim laden, load balancing en zonnepanelen integratie.',
+    icon: Zap,
+    keywords: ['slim', 'smart', 'laden', 'zonnepanelen', 'load', 'balancing']
   },
   {
-    href: '/guide/family-support',
-    label: 'Family Support Resources',
-    description: 'How families can support their loved ones through recovery.',
-    icon: Users,
-    keywords: ['family', 'support', 'loved', 'ones', 'intervention']
+    href: '/gids/zakelijk',
+    label: 'Zakelijke Laadoplossingen',
+    description: 'Oplossingen voor bedrijven, parkeergarages en wagenparken.',
+    icon: Car,
+    keywords: ['zakelijk', 'bedrijf', 'fleet', 'wagenpark', 'parkeer']
   }
 ];
 
-// Sub-pillar content for specific treatment types
+// Sub-pillar content for specific types
 const typeSubGuides: Record<string, GuideLink[]> = {
-  'inpatient': [
+  'thuislader': [
     {
-      href: '/guide/types#inpatient',
-      label: 'Understanding Inpatient Treatment',
-      description: 'What to expect from residential treatment programs.',
-      icon: BookOpen,
-      keywords: ['inpatient', 'residential']
+      href: '/gids/laadpaal-types#thuislader',
+      label: 'Thuisladers',
+      description: 'De beste oplossingen voor thuis laden.',
+      icon: Battery,
+      keywords: ['thuislader', 'thuis', 'particulier']
     }
   ],
-  'outpatient': [
+  'zakelijk': [
     {
-      href: '/guide/types#outpatient',
-      label: 'Outpatient Treatment Options',
-      description: 'Flexible treatment while maintaining daily responsibilities.',
-      icon: Stethoscope,
-      keywords: ['outpatient', 'iop', 'php']
+      href: '/gids/zakelijk',
+      label: 'Zakelijke Laadpalen',
+      description: 'Professionele laadoplossingen voor bedrijven.',
+      icon: Car,
+      keywords: ['zakelijk', 'bedrijf', 'kantoor']
     }
   ],
-  'detox': [
+  'snellader': [
     {
-      href: '/guide/types#detox',
-      label: 'Medical Detox Programs',
-      description: 'Safe, medically supervised detoxification services.',
-      icon: Shield,
-      keywords: ['detox', 'withdrawal', 'medical']
+      href: '/gids/laadpaal-types#snellader',
+      label: 'Snelladers',
+      description: 'DC snelladers voor publieke locaties.',
+      icon: Zap,
+      keywords: ['snellader', 'dc', 'snel']
     }
   ],
-  'sober-living': [
+  'slim-laden': [
     {
-      href: '/guide/types#sober-living',
-      label: 'Sober Living Homes',
-      description: 'Transitional housing for continued recovery support.',
-      icon: Users,
-      keywords: ['sober', 'living', 'transitional', 'housing']
-    }
-  ],
-  'dual-diagnosis': [
-    {
-      href: '/guide/mental-health',
-      label: 'Dual Diagnosis Treatment',
-      description: 'Treatment for co-occurring mental health and substance use disorders.',
-      icon: Brain,
-      keywords: ['dual', 'diagnosis', 'mental', 'health']
+      href: '/gids/slim-laden',
+      label: 'Slim Laden Systemen',
+      description: 'Load balancing en smart charging oplossingen.',
+      icon: Settings,
+      keywords: ['slim', 'smart', 'balancing']
     }
   ]
 };
 
 interface RelatedGuidesProps {
   currentType?: string;
-  currentState?: string;
+  currentProvince?: string;
   maxGuides?: number;
   className?: string;
   showDescription?: boolean;
@@ -108,7 +99,7 @@ interface RelatedGuidesProps {
 
 export default function RelatedGuides({
   currentType,
-  currentState,
+  currentProvince,
   maxGuides = 3,
   className = '',
   showDescription = true,
@@ -131,13 +122,13 @@ export default function RelatedGuides({
       }
     }
 
-    // Boost insurance guide for all pages (always relevant)
-    if (guide.href === '/guide/insurance') {
+    // Boost subsidie guide for all pages (always relevant)
+    if (guide.href === '/gids/subsidies') {
       score = Math.max(score, 2);
     }
 
     // Always include the types guide at minimum score
-    if (guide.href === '/guide/types') {
+    if (guide.href === '/gids/laadpaal-types') {
       score = Math.max(score, 1);
     }
 
@@ -163,7 +154,7 @@ export default function RelatedGuides({
     return (
       <div className={`${className}`}>
         <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-          Helpful Resources
+          Handige Informatie
         </h3>
         <ul className="space-y-2">
           {guidesToShow.map((guide) => (
@@ -185,7 +176,7 @@ export default function RelatedGuides({
   if (variant === 'card') {
     return (
       <div className={`bg-muted/50 rounded-lg p-6 ${className}`}>
-        <h3 className="font-semibold text-lg mb-4">Related Guides</h3>
+        <h3 className="font-semibold text-lg mb-4">Gerelateerde Gidsen</h3>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {guidesToShow.map((guide) => (
             <Link
@@ -216,7 +207,7 @@ export default function RelatedGuides({
   // Default variant
   return (
     <div className={`${className}`}>
-      <h3 className="font-semibold text-lg mb-4">Related Guides</h3>
+      <h3 className="font-semibold text-lg mb-4">Gerelateerde Gidsen</h3>
       <div className="space-y-4">
         {guidesToShow.map((guide) => (
           <Link

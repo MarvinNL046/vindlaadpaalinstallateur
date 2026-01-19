@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Compare Treatment Centers | RehabNearMe.com',
-  description: 'Compare treatment centers side by side. View details, photos, ratings, and services to find the right facility.',
+  title: 'Vergelijk Laadpaal Installateurs | VindLaadpaalInstallateur.nl',
+  description: 'Vergelijk laadpaal installateurs naast elkaar. Bekijk details, foto\'s, beoordelingen en diensten om de juiste installateur te vinden.',
   robots: {
     index: false,
     follow: true,

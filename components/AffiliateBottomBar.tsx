@@ -53,18 +53,18 @@ export default function AffiliateBottomBar() {
         <div className="flex items-center gap-3">
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium truncate">
-              Verify your insurance coverage
+              Vergelijk laadpaal installateurs
             </p>
             <p className="text-xs text-primary-foreground/70">
-              Check if treatment is covered
+              Vind de beste installateur bij jou in de buurt
             </p>
           </div>
           <a
-            href="/guide/insurance"
+            href="/vergelijk"
             className="flex-shrink-0"
           >
             <Button variant="accent" size="sm" className="gap-1">
-              Check Now
+              Vergelijk Nu
               <ArrowRight className="w-3 h-3" />
             </Button>
           </a>
@@ -84,23 +84,23 @@ export default function AffiliateBottomBar() {
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                <Heart className="w-5 h-5 text-rose-300" />
+                <Heart className="w-5 h-5 text-green-300" />
               </div>
               <div>
                 <p className="font-semibold">
-                  Need help finding treatment?
+                  Op zoek naar een laadpaal installateur?
                 </p>
                 <p className="text-sm text-primary-foreground/80">
-                  Verify your insurance coverage and find treatment options that fit your needs. Free and confidential.
+                  Vergelijk gecertificeerde installateurs en ontvang gratis offertes. Snel en betrouwbaar.
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-3 flex-shrink-0">
               <a
-                href="/guide/insurance"
+                href="/vergelijk"
               >
                 <Button variant="accent" className="gap-2">
-                  Verify Insurance
+                  Gratis Offerte
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </a>

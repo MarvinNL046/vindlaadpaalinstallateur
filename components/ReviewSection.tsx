@@ -319,7 +319,7 @@ export default function ReviewSection({
                     <textarea
                       value={reviewContent}
                       onChange={(e) => setReviewContent(e.target.value)}
-                      placeholder="Tell us about your experience with this treatment center. How was the care? What did you like? What could be improved?"
+                      placeholder="Vertel ons over je ervaring met deze installateur. Hoe was de service? Wat vond je goed? Wat kan beter?"
                       rows={4}
                       className="w-full px-3 py-2 border rounded-md resize-none"
                       required

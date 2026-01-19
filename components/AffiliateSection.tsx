@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Phone, Shield, Heart } from 'lucide-react';
+import { ExternalLink, Phone, Zap, Calculator } from 'lucide-react';
 
 interface AffiliatePartner {
   name: string;
@@ -14,27 +14,27 @@ interface AffiliatePartner {
 
 const partners: AffiliatePartner[] = [
   {
-    name: 'Verify Insurance Coverage',
-    description: 'Check if your insurance covers addiction treatment at no cost to you',
-    icon: <Shield className="w-6 h-6" />,
-    ctaText: 'Check coverage',
-    href: '/insurance-verification',
-    tag: 'Free'
+    name: 'Gratis Offerte Aanvragen',
+    description: 'Ontvang binnen 24 uur vrijblijvende offertes van gecertificeerde installateurs',
+    icon: <Calculator className="w-6 h-6" />,
+    ctaText: 'Vraag offerte aan',
+    href: '/offerte',
+    tag: 'Gratis'
   },
   {
-    name: '24/7 Helpline',
-    description: 'Speak with a treatment specialist who can help you find the right program',
+    name: 'Telefonisch Advies',
+    description: 'Spreek met een laadpaal specialist die je kan helpen met de juiste keuze',
     icon: <Phone className="w-6 h-6" />,
-    ctaText: 'Call now',
-    href: 'tel:1-800-662-4357',
-    tag: 'Confidential'
+    ctaText: 'Bel nu',
+    href: 'tel:0800-1234567',
+    tag: 'Gratis'
   },
   {
-    name: 'Family Support Resources',
-    description: 'Resources and guidance for families of those struggling with addiction',
-    icon: <Heart className="w-6 h-6" />,
-    ctaText: 'Learn more',
-    href: '/guide/family-support',
+    name: 'Subsidie Informatie',
+    description: 'Ontdek welke subsidies en fiscale voordelen beschikbaar zijn voor jouw situatie',
+    icon: <Zap className="w-6 h-6" />,
+    ctaText: 'Bekijk subsidies',
+    href: '/gids/subsidies',
   }
 ];
 
@@ -43,10 +43,10 @@ export default function AffiliateSection() {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold mb-3">Get Help Today</h2>
+          <h2 className="text-2xl font-bold mb-3">Start Vandaag</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Taking the first step toward recovery can be overwhelming.
-            These resources can help you or your loved one start the journey to healing.
+            De eerste stap naar elektrisch rijden begint met de juiste laadoplossing.
+            Deze hulpmiddelen helpen je op weg naar een duurzame toekomst.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function AffiliateSection() {
 
         <div className="text-center mt-8">
           <p className="text-xs text-gray-500">
-            All calls are confidential. If you are in crisis, please call 988 for the Suicide & Crisis Lifeline.
+            Alle installateurs zijn gecertificeerd en werken volgens de geldende NEN-normen.
           </p>
         </div>
       </div>

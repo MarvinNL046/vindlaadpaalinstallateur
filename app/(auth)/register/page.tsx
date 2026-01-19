@@ -92,17 +92,17 @@ export default function RegisterPage() {
               <Trees className="w-6 h-6 text-coral-400" />
             </div>
             <div>
-              <span className="text-2xl font-serif font-bold text-white">Rehab</span>
-              <span className="text-2xl font-serif font-bold text-coral-400">NearMe</span>
+              <span className="text-2xl font-serif font-bold text-white">Vind</span>
+              <span className="text-2xl font-serif font-bold text-coral-400">LaadpaalInstallateur</span>
             </div>
           </Link>
           <h2 className="font-serif text-4xl xl:text-5xl font-bold text-white leading-tight mb-6">
-            Find recovery, hope
+            Vind de beste
             <br />
-            <span className="text-coral-300">and healing.</span>
+            <span className="text-green-300">laadpaal installateur.</span>
           </h2>
           <p className="text-white/70 text-lg max-w-md">
-            Create an account and manage your facility listings. Help people find the right care.
+            Maak een account aan en beheer je installateursprofiel. Help klanten de juiste installateur te vinden.
           </p>
 
           {/* Benefits on desktop */}
@@ -111,19 +111,19 @@ export default function RegisterPage() {
               <div className="w-8 h-8 rounded-full bg-coral-500/20 flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 text-coral-400" />
               </div>
-              <span className="text-white/80">Claim facility listings</span>
+              <span className="text-white/80">Claim je installateursvermelding</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-coral-500/20 flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 text-coral-400" />
               </div>
-              <span className="text-white/80">Manage your location information</span>
+              <span className="text-white/80">Beheer je bedrijfsinformatie</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-coral-500/20 flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 text-coral-400" />
               </div>
-              <span className="text-white/80">View statistics and messages</span>
+              <span className="text-white/80">Bekijk statistieken en berichten</span>
             </div>
           </div>
         </div>
@@ -137,8 +137,8 @@ export default function RegisterPage() {
             <Link href="/" className="inline-flex items-center gap-2">
               <Trees className="w-8 h-8 text-primary" />
               <div>
-                <span className="text-xl font-serif font-bold text-primary">Rehab</span>
-                <span className="text-xl font-serif font-bold text-accent">NearMe</span>
+                <span className="text-xl font-serif font-bold text-primary">Vind</span>
+                <span className="text-xl font-serif font-bold text-accent">LaadpaalInstallateur</span>
               </div>
             </Link>
           </div>
@@ -313,19 +313,19 @@ export default function RegisterPage() {
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-sm text-foreground">Claim facility listings</span>
+                  <span className="text-sm text-foreground">Claim je installateursvermelding</span>
                 </div>
                 <div className="flex items-center gap-3 bg-card rounded-lg p-3 shadow-sm border border-border">
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-sm text-foreground">Manage your location information</span>
+                  <span className="text-sm text-foreground">Beheer je bedrijfsinformatie</span>
                 </div>
                 <div className="flex items-center gap-3 bg-card rounded-lg p-3 shadow-sm border border-border">
                   <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-sm text-foreground">View statistics and messages</span>
+                  <span className="text-sm text-foreground">Bekijk statistieken en berichten</span>
                 </div>
               </div>
             </div>

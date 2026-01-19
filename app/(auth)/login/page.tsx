@@ -88,17 +88,17 @@ export default function LoginPage() {
               <Trees className="w-6 h-6 text-coral-400" />
             </div>
             <div>
-              <span className="text-2xl font-serif font-bold text-white">Rehab</span>
-              <span className="text-2xl font-serif font-bold text-coral-400">NearMe</span>
+              <span className="text-2xl font-serif font-bold text-white">Vind</span>
+              <span className="text-2xl font-serif font-bold text-coral-400">LaadpaalInstallateur</span>
             </div>
           </Link>
           <h2 className="font-serif text-4xl xl:text-5xl font-bold text-white leading-tight mb-6">
-            Find recovery, hope
+            Vind de beste
             <br />
-            <span className="text-coral-300">and healing.</span>
+            <span className="text-green-300">laadpaal installateur.</span>
           </h2>
           <p className="text-white/70 text-lg max-w-md">
-            Manage your treatment facility listings and help people find the right care.
+            Beheer je installateursprofiel en help klanten de juiste installateur te vinden.
           </p>
         </div>
       </div>
@@ -111,8 +111,8 @@ export default function LoginPage() {
             <Link href="/" className="inline-flex items-center gap-2">
               <Trees className="w-8 h-8 text-primary" />
               <div>
-                <span className="text-xl font-serif font-bold text-primary">Rehab</span>
-                <span className="text-xl font-serif font-bold text-accent">NearMe</span>
+                <span className="text-xl font-serif font-bold text-primary">Vind</span>
+                <span className="text-xl font-serif font-bold text-accent">LaadpaalInstallateur</span>
               </div>
             </Link>
           </div>

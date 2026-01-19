@@ -27,14 +27,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!post) {
     return {
-      title: 'Article not found',
+      title: 'Artikel niet gevonden',
     };
   }
 
   return {
-    title: `${post.title} | Blog - Rehab Near Me`,
+    title: `${post.title} | Blog - VindLaadpaalInstallateur.nl`,
     description: post.excerpt,
-    keywords: `${post.category.toLowerCase()}, addiction treatment, rehab, recovery, ${post.title.toLowerCase().split(' ').slice(0, 3).join(', ')}`,
+    keywords: `${post.category.toLowerCase()}, laadpaal installatie, thuislader, elektrisch rijden, ${post.title.toLowerCase().split(' ').slice(0, 3).join(', ')}`,
     authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       authors: [post.author],
       publishedTime: post.date,
-      siteName: 'Rehab Near Me',
-      locale: 'en_US',
+      siteName: 'VindLaadpaalInstallateur.nl',
+      locale: 'nl_NL',
     },
     twitter: {
       card: 'summary_large_image',
@@ -88,15 +88,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     dateModified: post.date,
     publisher: {
       '@type': 'Organization',
-      name: 'Rehab Near Me',
+      name: 'VindLaadpaalInstallateur.nl',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.rehabnearbyme.com/logo.png',
+        url: 'https://www.vindlaadpaalinstallateur.nl/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.rehabnearbyme.com/blog/${slug}`,
+      '@id': `https://www.vindlaadpaalinstallateur.nl/blog/${slug}`,
     },
   };
 
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-white mb-4 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back to blog
+              Terug naar blog
             </Link>
 
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 max-w-4xl">
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </span>
               <span className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                {new Date(post.date).toLocaleDateString('en-US', {
+                {new Date(post.date).toLocaleDateString('nl-NL', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'
@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </span>
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
-                {post.readTime} read
+                {post.readTime} leestijd
               </span>
               <span className="px-3 py-1 bg-accent text-accent-foreground rounded-full text-xs font-medium">
                 {post.category}
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Card className="p-6 shadow-soft mb-8">
                   <h3 className="font-serif font-semibold mb-4 flex items-center gap-2">
                     <Share2 className="w-5 h-5 text-accent" />
-                    Share this article
+                    Deel dit artikel
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     <Button variant="outline" size="sm" className="hover:border-accent hover:text-accent">
@@ -229,7 +229,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                 {/* Related Posts */}
                 <Card className="p-6 shadow-soft">
-                  <h3 className="font-serif font-semibold mb-4">Related Articles</h3>
+                  <h3 className="font-serif font-semibold mb-4">Gerelateerde Artikelen</h3>
                   <div className="space-y-4">
                     {relatedPosts.map((relatedPost) => (
                       <div key={relatedPost.slug} className="group">
@@ -240,7 +240,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                           {relatedPost.title}
                         </Link>
                         <p className="text-xs text-muted-foreground mt-1">
-                          {relatedPost.readTime} read
+                          {relatedPost.readTime} leestijd
                         </p>
                       </div>
                     ))}
@@ -248,21 +248,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 </Card>
 
                 {/* Newsletter */}
-                <Card className="p-6 shadow-soft bg-gradient-to-br from-teal-50 to-coral-50/50 dark:from-teal-900/20 dark:to-coral-900/10 border-teal-100 dark:border-teal-800">
+                <Card className="p-6 shadow-soft bg-gradient-to-br from-green-50 to-blue-50/50 dark:from-green-900/20 dark:to-blue-900/10 border-green-100 dark:border-green-800">
                   <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                     <BookOpen className="w-5 h-5 text-accent" />
                   </div>
-                  <h3 className="font-serif font-semibold mb-3">Newsletter</h3>
+                  <h3 className="font-serif font-semibold mb-3">Nieuwsbrief</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Get recovery resources and treatment guides in your inbox.
+                    Ontvang laadpaal tips en subsidie nieuws in je inbox.
                   </p>
                   <input
                     type="email"
-                    placeholder="Your email address"
+                    placeholder="Je e-mailadres"
                     className="w-full px-3 py-2 text-sm border-2 rounded-lg mb-2 focus:outline-none focus:border-accent bg-background"
                   />
                   <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="sm">
-                    Subscribe
+                    Aanmelden
                   </Button>
                 </Card>
               </aside>
@@ -271,24 +271,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* CTA Section */}
             <div className="mt-16 text-center">
               <h2 className="font-serif text-2xl font-semibold mb-4">
-                Ready to Find Treatment?
+                Op Zoek naar een Laadpaal Installateur?
               </h2>
               <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
                 {getCtaStatsText()}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="/search"
+                  href="/zoeken"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
                 >
-                  Find Rehab Centers
+                  Vind Installateurs
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/blog"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
                 >
-                  More Articles
+                  Meer Artikelen
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

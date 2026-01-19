@@ -10,16 +10,16 @@ import { getCtaStatsText } from '@/lib/stats-config';
 
 const ctaStatsText = getCtaStatsText();
 
-// Placeholder images for blog posts (recovery/treatment themed)
+// Placeholder images for blog posts (laadpaal themed)
 const blogImages = [
-  '/images/blog/recovery-support.jpg',
-  '/images/blog/treatment-center.jpg',
-  '/images/blog/therapy-session.jpg',
-  '/images/blog/family-support.jpg',
-  '/images/blog/meditation.jpg',
-  '/images/blog/group-therapy.jpg',
-  '/images/blog/nature-healing.jpg',
-  '/images/blog/hope-recovery.jpg',
+  '/images/blog/laadpaal-installatie.jpg',
+  '/images/blog/ev-laden.jpg',
+  '/images/blog/thuislader.jpg',
+  '/images/blog/zonnepanelen-auto.jpg',
+  '/images/blog/smart-charging.jpg',
+  '/images/blog/zakelijk-laden.jpg',
+  '/images/blog/elektrische-auto.jpg',
+  '/images/blog/laadpunt.jpg',
 ];
 
 // Helper function to get a placeholder image based on post index
@@ -28,21 +28,21 @@ function getPlaceholderImage(index: number): string {
 }
 
 export const metadata: Metadata = {
-  title: 'Blog | Rehab Near Me - Addiction Treatment & Recovery Resources',
-  description: 'Expert articles about addiction treatment, recovery tips, how to choose a rehab, insurance coverage, and supporting loved ones through addiction.',
-  keywords: 'addiction treatment blog, rehab guide, recovery tips, drug rehab articles, alcohol treatment resources, addiction help, family support addiction',
-  authors: [{ name: 'Rehab Near Me' }],
+  title: 'Blog | Vind Laadpaal Installateur - Laadpaal Tips & Informatie',
+  description: 'Deskundige artikelen over laadpaal installatie, slim laden, subsidies, laadpaal merken vergelijken en tips voor elektrisch rijden.',
+  keywords: 'laadpaal blog, laadpaal installatie tips, slim laden, laadpaal subsidie, thuislader informatie, EV laden, elektrisch rijden',
+  authors: [{ name: 'VindLaadpaalInstallateur.nl' }],
   openGraph: {
-    title: 'Blog - Rehab Near Me',
-    description: 'Expert resources on addiction treatment, recovery strategies, and finding the right rehab center',
+    title: 'Blog - Vind Laadpaal Installateur',
+    description: 'Deskundige informatie over laadpaal installatie, slim laden en elektrisch rijden',
     type: 'website',
-    siteName: 'Rehab Near Me',
-    locale: 'en_US',
+    siteName: 'VindLaadpaalInstallateur.nl',
+    locale: 'nl_NL',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Rehab Near Me',
-    description: 'Expert resources on addiction treatment and recovery',
+    title: 'Blog - Vind Laadpaal Installateur',
+    description: 'Deskundige informatie over laadpaal installatie en elektrisch rijden',
   },
   robots: {
     index: true,
@@ -74,22 +74,22 @@ export default function BlogPage() {
           </nav>
 
           <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4">
-            Recovery Resources
+            Laadpaal Informatie
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl">
-            Expert guides, treatment insights, and recovery strategies to help you
-            or your loved one on the path to healing.
+            Deskundige gidsen, installatie tips en alles over slim laden om jou
+            te helpen bij de overstap naar elektrisch rijden.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap gap-8 mt-8">
             <div>
-              <div className="text-3xl font-bold text-coral-300">{blogPosts.length}</div>
-              <div className="text-primary-foreground/70 text-sm">Articles</div>
+              <div className="text-3xl font-bold text-green-300">{blogPosts.length}</div>
+              <div className="text-primary-foreground/70 text-sm">Artikelen</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-coral-300">{categories.length}</div>
-              <div className="text-primary-foreground/70 text-sm">Categories</div>
+              <div className="text-3xl font-bold text-green-300">{categories.length}</div>
+              <div className="text-primary-foreground/70 text-sm">Categorieen</div>
             </div>
           </div>
         </div>
@@ -103,14 +103,14 @@ export default function BlogPage() {
               <Card className="p-6 shadow-soft sticky top-4">
                 <div className="flex items-center gap-2 mb-4">
                   <Tag className="w-5 h-5 text-accent" />
-                  <h3 className="font-serif font-semibold">Categories</h3>
+                  <h3 className="font-serif font-semibold">Categorieen</h3>
                 </div>
                 <ul className="space-y-3">
                   {categories.map((category) => (
                     <li key={category.name}>
                       <button className="text-sm text-muted-foreground hover:text-accent transition-colors flex justify-between w-full group">
                         <span className="group-hover:translate-x-1 transition-transform">{category.name}</span>
-                        <span className="text-xs bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full">
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
                           {category.count}
                         </span>
                       </button>
@@ -134,7 +134,7 @@ export default function BlogPage() {
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full">
-                        FEATURED
+                        UITGELICHT
                       </span>
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function BlogPage() {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
-                        {new Date(blogPosts[0].date).toLocaleDateString('en-US')}
+                        {new Date(blogPosts[0].date).toLocaleDateString('nl-NL')}
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
@@ -160,7 +160,7 @@ export default function BlogPage() {
                       href={`/blog/${blogPosts[0].slug}`}
                       className="mt-6 inline-flex items-center gap-2 text-accent font-medium hover:underline"
                     >
-                      Read article
+                      Lees artikel
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -198,7 +198,7 @@ export default function BlogPage() {
                         <div className="flex items-center gap-3 text-sm text-muted-foreground">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
-                            {new Date(post.date).toLocaleDateString('en-US')}
+                            {new Date(post.date).toLocaleDateString('nl-NL')}
                           </span>
                           <span className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
@@ -209,7 +209,7 @@ export default function BlogPage() {
                           href={`/blog/${post.slug}`}
                           className="text-accent hover:underline text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity"
                         >
-                          Read more
+                          Lees meer
                           <ArrowRight className="w-3 h-3" />
                         </Link>
                       </div>
@@ -224,26 +224,26 @@ export default function BlogPage() {
               <PremiumContentBanner />
 
               {/* Newsletter signup */}
-              <Card className="p-8 shadow-soft bg-gradient-to-r from-teal-50 to-coral-50/30 dark:from-teal-900/20 dark:to-coral-900/10 border-teal-100 dark:border-teal-800 text-center">
+              <Card className="p-8 shadow-soft bg-gradient-to-r from-green-50 to-blue-50/30 dark:from-green-900/20 dark:to-blue-900/10 border-green-100 dark:border-green-800 text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BookOpen className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-serif text-2xl font-semibold mb-3">Stay Informed</h3>
+                <h3 className="font-serif text-2xl font-semibold mb-3">Blijf Op de Hoogte</h3>
                 <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                  Receive monthly recovery resources, treatment guides, and
-                  support articles directly to your inbox.
+                  Ontvang maandelijks laadpaal tips, subsidie nieuws en
+                  informatie over elektrisch rijden in je inbox.
                 </p>
                 <form className="max-w-md mx-auto flex gap-2">
                   <input
                     type="email"
-                    placeholder="Your email address"
+                    placeholder="Je e-mailadres"
                     className="flex-1 px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-accent bg-background"
                   />
                   <button
                     type="submit"
                     className="px-6 py-2 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-colors"
                   >
-                    Subscribe
+                    Aanmelden
                   </button>
                 </form>
               </Card>
@@ -253,16 +253,16 @@ export default function BlogPage() {
           {/* CTA Section */}
           <div className="mt-16 text-center">
             <h2 className="font-serif text-2xl font-semibold mb-4">
-              Ready to Find Treatment?
+              Op Zoek naar een Laadpaal Installateur?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
               {ctaStatsText}
             </p>
             <Link
-              href="/search"
+              href="/zoeken"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
-              Find Rehab Centers
+              Vind Installateurs
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
